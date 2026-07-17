@@ -1,0 +1,31 @@
+name: Security Scan
+
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"
+
+jobs:
+  secrets-and-dependencies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --upgrade pip pip-audit
+      - run: pip-audit --progress-spinner off --requirement apps/api/requirements.txt
+      - name: Audit optional local-model backend
+        run: >-
+          pip-audit --progress-spinner off
+          --requirement apps/api/requirements-models.txt
+          --ignore-vuln PYSEC-2026-2447
+      - run: npm audit --omit=dev --audit-level=high

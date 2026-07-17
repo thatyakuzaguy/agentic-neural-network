@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "vram_policy": "SEQUENTIAL",
+  "max_loaded_models": 1,
+  "allow_parallel_llms": false,
+  "default_mode": "FAST",
+  "auto_unload_after_execution": true,
+  "collect_metrics": true,
+  "backend": "mock",
+  "available_backends": [
+    "mock",
+    "embedded",
+    "llama_cpp",
+    "qwen_local",
+    "ollama",
+    "gguf",
+    "unsloth_qwen"
+  ],
+  "backend_policy": {
+    "allow_real_model_load": false,
+    "allow_network": false,
+    "allow_model_download": false,
+    "allow_training": false,
+    "allow_adapter_write": false,
+    "allow_dataset_write": false
+  }
+}

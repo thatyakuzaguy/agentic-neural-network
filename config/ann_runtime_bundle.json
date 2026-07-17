@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "priority": [
+    "embedded",
+    "venv",
+    "conda",
+    "system"
+  ],
+  "dependencies": [
+    "python",
+    "torch",
+    "transformers",
+    "PySide6",
+    "runtime_engine"
+  ],
+  "embedded_python_executable": "",
+  "include_python_executable_size": true,
+  "no_downloads": true,
+  "no_installs": true,
+  "no_internet": true
+}

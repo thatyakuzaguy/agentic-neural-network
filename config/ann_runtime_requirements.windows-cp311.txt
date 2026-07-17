@@ -1,0 +1,15 @@
+# ANN Windows embedded runtime wheelhouse input.
+# This file is declarative. ANN does not install or download these packages automatically.
+# Build/download wheels externally, then copy verified .whl files to D:\ANN\runtime\wheels.
+
+PySide6>=6.7,<7
+torch>=2.10
+transformers>=4.45
+safetensors>=0.4
+numpy>=1.26
+psutil>=5.9
+packaging>=24
+
+# Qwen2.5 GGUF backend. For CUDA/cuBLAS on Windows this may require a
+# prebuilt compatible wheel or an external build machine with CMake + MSVC + CUDA.
+llama-cpp-python>=0.3

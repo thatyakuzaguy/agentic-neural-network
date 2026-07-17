@@ -1,0 +1,604 @@
+{
+  "version": "18.9.5",
+  "python_version": "3.11+",
+  "platform": "windows",
+  "architecture": "x86_64",
+  "cuda_variant": "cu12x",
+  "expected_runtime_path": "D:\\ANN\\runtime",
+  "verification_status": "hash_verified",
+  "source": "local_verified_wheelhouse",
+  "packages": [
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "role": "qwen25_gguf",
+      "required_for": [
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "filelock",
+      "version": "3.29.6",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.6.0",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "role": "qwen25_gguf",
+      "required_for": [
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "llama-cpp-python",
+      "version": "0.3.33",
+      "role": "qwen25_gguf",
+      "required_for": [
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "role": "qwen25_gguf",
+      "required_for": [
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.2.10",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.86",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.9.79",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.10.19",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.5.82",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.10.65",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.9.86",
+      "role": "cuda_runtime_optional",
+      "required_for": [
+        "optional_cuda_acceleration"
+      ],
+      "optional": true,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "pyside6",
+      "version": "6.11.1",
+      "role": "desktop",
+      "required_for": [
+        "required_for_desktop"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "pyside6-addons",
+      "version": "6.11.1",
+      "role": "desktop",
+      "required_for": [
+        "required_for_desktop"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "pyside6-essentials",
+      "version": "6.11.1",
+      "role": "desktop",
+      "required_for": [
+        "required_for_desktop"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "setuptools",
+      "version": "81.0.0",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.11.1",
+      "role": "desktop",
+      "required_for": [
+        "required_for_desktop"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "torch",
+      "version": "2.12.0",
+      "role": "local_model_runtime",
+      "required_for": [
+        "required_for_qwen3_hf",
+        "required_for_deepseek_hf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "role": "runtime_dependency",
+      "required_for": [
+        "required_for_desktop",
+        "required_for_qwen25_gguf"
+      ],
+      "optional": false,
+      "expected_runtime_path": "D:\\ANN\\runtime\\site-packages",
+      "verification_status": "hash_verified",
+      "notes": "Verified from D:\\ANN\\runtime\\wheels."
+    }
+  ],
+  "wheels": [
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "filename": "diskcache-5.6.3-py3-none-any.whl",
+      "sha256": "5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19",
+      "size_bytes": 45550,
+      "source": "offline_wheelhouse",
+      "role": "qwen25_gguf",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "filelock",
+      "version": "3.29.6",
+      "filename": "filelock-3.29.6-py3-none-any.whl",
+      "sha256": "14d5f5597d2e0c4dbd774cfb6d8132da1db44da83732aab679d54f7dcf97ab65",
+      "size_bytes": 45478,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.6.0",
+      "filename": "fsspec-2026.6.0-py3-none-any.whl",
+      "sha256": "02e0b71817df9b2169dc30a16832045764def1191b43dcff5bb85bdee212d2a1",
+      "size_bytes": 203949,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "filename": "jinja2-3.1.6-py3-none-any.whl",
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "size_bytes": 134899,
+      "source": "offline_wheelhouse",
+      "role": "qwen25_gguf",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "llama-cpp-python",
+      "version": "0.3.33",
+      "filename": "llama_cpp_python-0.3.33-py3-none-win_amd64.whl",
+      "sha256": "ac941f5788ef1288ab30e5336d585528d7d8c9434a8b8d2e8b5cd08f02d65aed",
+      "size_bytes": 6618795,
+      "source": "offline_wheelhouse",
+      "role": "qwen25_gguf",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "filename": "markupsafe-3.0.3-cp311-cp311-win_amd64.whl",
+      "sha256": "de8a88e63464af587c950061a5e6a67d3632e36df62b986892331d4620a35c01",
+      "size_bytes": 15077,
+      "source": "offline_wheelhouse",
+      "role": "qwen25_gguf",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "filename": "mpmath-1.3.0-py3-none-any.whl",
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "size_bytes": 536198,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "filename": "networkx-3.6.1-py3-none-any.whl",
+      "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762",
+      "size_bytes": 2068504,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6",
+      "filename": "numpy-2.4.6-cp311-cp311-win_amd64.whl",
+      "sha256": "1e254a00cdf42b1e4d5b3d68d33af63268d41340d8885df2ab6470f2e1500147",
+      "size_bytes": 12608406,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.2.10",
+      "filename": "nvidia_cublas_cu12-12.9.2.10-py3-none-win_amd64.whl",
+      "sha256": "623f43027d40d44ceadf0043f002bd25cf353e8f13ce90b9a87057019f560661",
+      "size_bytes": 553162896,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.86",
+      "filename": "nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-win_amd64.whl",
+      "sha256": "72972ebdcf504d69462d3bcd67e7b81edd25d0fb85a2c46d3ea3517666636349",
+      "size_bytes": 76408187,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.9.79",
+      "filename": "nvidia_cuda_runtime_cu12-12.9.79-py3-none-win_amd64.whl",
+      "sha256": "8e018af8fa02363876860388bd10ccb89eb9ab8fb0aa749aaf58430a9f7c4891",
+      "size_bytes": 3591604,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.10.19",
+      "filename": "nvidia_curand_cu12-10.3.10.19-py3-none-win_amd64.whl",
+      "sha256": "e8129e6ac40dc123bd948e33d3e11b4aa617d87a583fa2f21b3210e90c743cde",
+      "size_bytes": 68774847,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.5.82",
+      "filename": "nvidia_cusolver_cu12-11.7.5.82-py3-none-win_amd64.whl",
+      "sha256": "77666337237716783c6269a658dea310195cddbd80a5b2919b1ba8735cec8efd",
+      "size_bytes": 326215953,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.10.65",
+      "filename": "nvidia_cusparse_cu12-12.5.10.65-py3-none-win_amd64.whl",
+      "sha256": "9e487468a22a1eaf1fbd1d2035936a905feb79c4ce5c2f67626764ee4f90227c",
+      "size_bytes": 362504719,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.9.86",
+      "filename": "nvidia_nvjitlink_cu12-12.9.86-py3-none-win_amd64.whl",
+      "sha256": "cc6fcec260ca843c10e34c936921a1c426b351753587fdd638e8cff7b16bb9db",
+      "size_bytes": 35584936,
+      "source": "offline_wheelhouse",
+      "role": "cuda_runtime_optional",
+      "required": false,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "pyside6",
+      "version": "6.11.1",
+      "filename": "pyside6-6.11.1-cp310-abi3-win_amd64.whl",
+      "sha256": "0968877ab1fb4ef3587a284da6fe05e8647ada56a6a3750b6395188e01f4aba6",
+      "size_bytes": 578377,
+      "source": "offline_wheelhouse",
+      "role": "desktop",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "pyside6-addons",
+      "version": "6.11.1",
+      "filename": "pyside6_addons-6.11.1-cp310-abi3-win_amd64.whl",
+      "sha256": "0d13c4dfd671b050a48e4f8d8ddc724b7248f9c0437e7fc47fdf316278572923",
+      "size_bytes": 168816308,
+      "source": "offline_wheelhouse",
+      "role": "desktop",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "pyside6-essentials",
+      "version": "6.11.1",
+      "filename": "pyside6_essentials-6.11.1-cp310-abi3-win_amd64.whl",
+      "sha256": "63311bd48e32c584599ab04b9ef7c324082374cd2c9fa533f978fb893bb47e40",
+      "size_bytes": 77549267,
+      "source": "offline_wheelhouse",
+      "role": "desktop",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "setuptools",
+      "version": "81.0.0",
+      "filename": "setuptools-81.0.0-py3-none-any.whl",
+      "sha256": "fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6",
+      "size_bytes": 1062021,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.11.1",
+      "filename": "shiboken6-6.11.1-cp310-abi3-win_amd64.whl",
+      "sha256": "c2c6863aa80ec18c0f82cea3417837b279cdc60024ac17123461dc9042577df7",
+      "size_bytes": 1223647,
+      "source": "offline_wheelhouse",
+      "role": "desktop",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "filename": "sympy-1.14.0-py3-none-any.whl",
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+      "size_bytes": 6299353,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "torch",
+      "version": "2.12.0",
+      "filename": "torch-2.12.0-cp311-cp311-win_amd64.whl",
+      "sha256": "dd37188ea325042cb1f6cafa56822b11ada2520c04791a52629b0af25bdfbfd9",
+      "size_bytes": 122953128,
+      "source": "offline_wheelhouse",
+      "role": "local_model_runtime",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "size_bytes": 45571,
+      "source": "offline_wheelhouse",
+      "role": "runtime_dependency",
+      "required": true,
+      "status": "hash_verified",
+      "notes": "SHA256 computed from local wheelhouse."
+    }
+  ],
+  "hashes": {
+    "algorithm": "sha256",
+    "required": true,
+    "status": "hash_verified"
+  }
+}

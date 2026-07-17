@@ -1,0 +1,13 @@
+name: github
+version: 1.0
+description: Read-only GitHub repository metadata, file lookup, and deterministic pattern extraction skill.
+enabled: true
+requires_user_approval: true
+audit_enabled: true
+permissions:
+  network: ASK_ALWAYS
+  filesystem_read: ASK_ALWAYS
+  filesystem_write: DENY
+  git_read: ASK_ALWAYS
+  git_write: DENY
+  terminal_execute: DENY

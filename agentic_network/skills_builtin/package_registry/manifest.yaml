@@ -1,0 +1,13 @@
+name: package_registry
+version: 1.0
+description: Optional future package registry metadata skill manifest. No installs are allowed.
+enabled: false
+requires_user_approval: true
+audit_enabled: true
+permissions:
+  network: ASK_ALWAYS
+  filesystem_read: DENY
+  filesystem_write: DENY
+  git_read: DENY
+  git_write: DENY
+  terminal_execute: DENY

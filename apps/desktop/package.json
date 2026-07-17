@@ -1,0 +1,43 @@
+{
+  "name": "@aen/desktop",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Desktop shell for Agentic Engineering Network",
+  "main": "src/main.js",
+  "author": "Agentic Engineering Network",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron .",
+    "package": "electron-packager . \"Agentic Engineering Network\" --platform=win32 --arch=x64 --electron-version=42.3.3 --out=dist --overwrite --asar --ignore=\"^dist($|/)\"",
+    "package:portable": "electron-builder --win portable --x64"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@electron/packager": "19.0.1",
+    "electron": "42.3.3",
+    "electron-builder": "26.8.1"
+  },
+  "build": {
+    "appId": "local.agentic-engineering-network.desktop",
+    "productName": "Agentic Engineering Network",
+    "electronVersion": "42.3.3",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

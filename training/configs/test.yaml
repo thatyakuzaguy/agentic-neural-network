@@ -1,0 +1,27 @@
+base_model: Qwen/Qwen2.5-Coder-1.5B-Instruct
+
+dataset_path: training/datasets/external_50k_mixed.jsonl
+
+output_dir: training/adapters/agentic-external-50k-v1
+
+max_seq_length: 512
+
+epochs: 1
+
+learning_rate: 0.0002
+
+batch_size: 1
+
+gradient_accumulation_steps: 4
+
+lora_r: 8
+
+lora_alpha: 16
+
+lora_dropout: 0.05
+
+fp16: true
+
+bf16: false
+
+gradient_checkpointing: true

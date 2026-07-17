@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "github.read_repo": "ASK_ALWAYS",
+    "internet.search": "ASK_ALWAYS",
+    "internet.download": "DENY",
+    "filesystem.write": "DENY",
+    "terminal_execute": "DENY",
+    "git_write": "DENY"
+  }
+}

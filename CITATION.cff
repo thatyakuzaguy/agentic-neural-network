@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use ANN in research, please cite this software."
+title: "ANN: Agentic Neural Network"
+type: software
+authors:
+  - name: "ANN Project Contributors"
+version: 0.1.1
+date-released: 2026-07-17
+license: MIT
+repository-code: "https://github.com/ThatYakuzaGuy/agentic-neural-network"
+keywords:
+  - local-first
+  - multi-agent systems
+  - software engineering
+  - large language models
+  - autonomous agents

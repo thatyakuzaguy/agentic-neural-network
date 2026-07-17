@@ -1,0 +1,13 @@
+name: internet_search
+version: 1.0
+description: Optional future internet search skill manifest. No network execution exists in v10.0.
+enabled: false
+requires_user_approval: true
+audit_enabled: true
+permissions:
+  network: ASK_ALWAYS
+  filesystem_read: DENY
+  filesystem_write: DENY
+  git_read: DENY
+  git_write: DENY
+  terminal_execute: DENY

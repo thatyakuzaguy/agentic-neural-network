@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ANN Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Agentic Engineering Network</h1>
+        <p>Local read-only run dashboard</p>
+      </div>
+      <span class="readonly">Read only</span>
+    </header>
+
+    <main class="shell">
+      <aside class="panel runs-panel" aria-label="Runs">
+        <div class="panel-header">
+          <h2>Runs</h2>
+          <button id="refresh-runs" type="button">Refresh</button>
+        </div>
+        <div id="runs-list" class="runs-list" role="list"></div>
+      </aside>
+
+      <section class="panel detail-panel" aria-label="Run detail">
+        <div class="panel-header">
+          <div>
+            <h2 id="run-title">Select a run</h2>
+            <p id="run-task" class="muted">Open an ANN run to inspect summary, artifacts, and patches.</p>
+          </div>
+        </div>
+
+        <div id="status-grid" class="status-grid"></div>
+
+        <section class="subpanel next-step-panel" aria-label="Next action plan">
+          <div class="next-step-header">
+            <div>
+              <h3>Next Step</h3>
+              <p id="next-step-message" class="muted">Select a run to inspect the current action plan.</p>
+            </div>
+            <span id="next-step-state" class="next-step-state">No plan</span>
+          </div>
+          <div class="next-step-grid">
+            <div>
+              <dl id="next-step-summary" class="next-step-summary"></dl>
+              <h4>Planned steps</h4>
+              <ol id="next-step-steps" class="next-step-list"></ol>
+            </div>
+            <div class="next-step-columns">
+              <div>
+                <h4>Allowed actions</h4>
+                <ul id="next-step-allowed" class="next-step-list"></ul>
+              </div>
+              <div>
+                <h4>Blocked actions</h4>
+                <ul id="next-step-blocked-actions" class="next-step-list blocked-list"></ul>
+              </div>
+              <div>
+                <h4>Prerequisites</h4>
+                <ul id="next-step-prerequisites" class="next-step-list"></ul>
+              </div>
+              <div>
+                <h4>Risks</h4>
+                <ul id="next-step-risks" class="next-step-list"></ul>
+              </div>
+              <div>
+                <h4>Subsystems</h4>
+                <ul id="next-step-subsystems" class="next-step-list"></ul>
+              </div>
+              <div>
+                <h4>Expected artifacts</h4>
+                <ul id="next-step-artifacts" class="next-step-list"></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="split">
+          <section class="subpanel" aria-label="Artifacts">
+            <h3>Artifacts</h3>
+            <div id="artifacts-list" class="file-list"></div>
+          </section>
+          <section class="subpanel" aria-label="Patches">
+            <h3>Patches</h3>
+            <div id="patches-list" class="file-list"></div>
+          </section>
+        </div>
+
+        <section class="subpanel approval-panel" aria-label="Patch approval">
+          <div class="approval-grid">
+            <div>
+              <h3>Patch Metadata</h3>
+              <div id="patch-metadata" class="metadata-box">Select a patch to inspect approval metadata.</div>
+            </div>
+            <form id="approval-form" class="approval-form">
+              <h3>Visual Approval</h3>
+              <input
+                id="approval-token"
+                type="password"
+                autocomplete="off"
+                placeholder="Approval token"
+                aria-label="Approval token"
+              />
+              <label>
+                <input id="confirm-reviewed" type="checkbox" />
+                I reviewed the selected patch
+              </label>
+              <label>
+                <input id="confirm-no-apply" type="checkbox" />
+                I understand this does not apply the patch
+              </label>
+              <textarea id="approval-note" rows="2" placeholder="Optional note" aria-label="Approval note"></textarea>
+              <button id="approve-button" type="submit" disabled>Approve for review</button>
+              <p id="approval-result" class="muted"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="subpanel terminal-panel" aria-label="Safe terminal">
+          <div class="terminal-grid">
+            <form id="terminal-form" class="terminal-form">
+              <h3>Safe Terminal</h3>
+              <input id="terminal-cwd" type="text" value="." aria-label="Terminal working directory" />
+              <textarea
+                id="terminal-command"
+                rows="2"
+                aria-label="Terminal command JSON"
+              >["pytest", "tests/python/test_ui_backend_runtime.py", "-q"]</textarea>
+              <label>
+                <input id="terminal-confirm" type="checkbox" />
+                I confirm this allowlisted command should run locally
+              </label>
+              <button type="submit">Run command</button>
+            </form>
+            <pre id="terminal-output" class="terminal-output">Terminal Agent is idle.</pre>
+          </div>
+        </section>
+
+        <section class="subpanel" aria-label="Content viewer">
+          <div class="viewer-header">
+            <h3 id="viewer-title">Viewer</h3>
+            <span id="viewer-meta" class="muted"></span>
+          </div>
+          <pre id="content-viewer" class="viewer">No run selected.</pre>
+        </section>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

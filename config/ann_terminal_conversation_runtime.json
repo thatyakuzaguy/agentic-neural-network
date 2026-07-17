@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "allow_real_inference": false,
+  "runtime_type": "external_wsl_conda",
+  "python_executable_wsl": "python3",
+  "model_name": "qwen3_4b_conversation_orchestrator",
+  "model_path_windows": "D:/Models/qwen3-4b-instruct-2507-q4_k_m.gguf",
+  "model_path_wsl": "/mnt/d/Models/qwen3-4b-instruct-2507-q4_k_m.gguf",
+  "backend": "llama_cpp",
+  "max_tokens": 260,
+  "context_tokens": 2048,
+  "temperature": 0.2,
+  "require_gpu": true,
+  "n_gpu_layers": -1,
+  "timeout_ms": 180000,
+  "safety": {
+    "shell": false,
+    "downloads": false,
+    "dependency_install": false,
+    "model_modification": false,
+    "parallel_models": false,
+    "max_loaded_models": 1
+  }
+}

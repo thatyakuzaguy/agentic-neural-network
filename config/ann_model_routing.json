@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "default_mode": "FAST",
+  "vram_policy": "SEQUENTIAL",
+  "modes": {
+    "FAST": {
+      "description": "Use Qwen3 fine-tuned/adapters when available.",
+      "default_model": "qwen3_finetuned",
+      "fallback_model": "qwen3_base"
+    },
+    "POWERFUL": {
+      "description": "Use DeepSeek-R1-Distill-Qwen-14B for deeper reasoning when policy permits.",
+      "default_model": "deepseek_r1_distill_qwen_14b",
+      "fallback_model": "qwen3_base"
+    }
+  },
+  "agent_routes": {
+    "conversation_orchestrator": {
+      "FAST": "qwen3_4b_conversation_orchestrator",
+      "POWERFUL": "qwen3_4b_conversation_orchestrator"
+    },
+    "product": {
+      "FAST": "qwen3_product_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "architect": {
+      "FAST": "qwen3_architect_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "code": {
+      "FAST": "qwen3_code_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "test": {
+      "FAST": "qwen3_test_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "security": {
+      "FAST": "qwen3_security_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "reviewer": {
+      "FAST": "qwen3_reviewer_finetuned",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    },
+    "fallback": {
+      "FAST": "qwen3_base",
+      "POWERFUL": "deepseek_r1_distill_qwen_14b"
+    }
+  }
+}

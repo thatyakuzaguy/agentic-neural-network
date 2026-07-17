@@ -1,0 +1,28 @@
+name: Test
+
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install fastapi uvicorn pydantic sqlalchemy "psycopg[binary]" python-dotenv stripe pytest pytest-asyncio
+      - run: python -m pytest tests/python -q
+      - run: npm ci
+      - run: npm --workspace apps/web run test
+      - run: npm --workspace apps/web run build

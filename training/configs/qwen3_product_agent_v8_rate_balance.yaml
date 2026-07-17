@@ -1,0 +1,32 @@
+model_name_or_path: /mnt/d/Models/qwen3
+dataset_path: /mnt/d/AgenticEngineeringNetwork/training/datasets/product_agent/combined/product_agent_combined_v8_rate_balance.jsonl
+output_dir: /mnt/d/AgenticEngineeringNetwork/training/adapters/qwen3-8b-product-agent-v1
+
+max_seq_length: 2048
+load_in_4bit: true
+local_files_only: true
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.0
+target_modules: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+num_train_epochs: 1
+learning_rate: 0.0002
+warmup_ratio: 0.03
+weight_decay: 0.01
+logging_steps: 10
+save_steps: 100
+save_total_limit: 3
+optim: adamw_8bit
+lr_scheduler_type: linear
+packing: false
+bf16: true
+fp16: false
+seed: 42
+
+hf_home: /mnt/d/AgenticEngineeringNetwork/training/cache/huggingface
+torch_home: /mnt/d/AgenticEngineeringNetwork/training/cache/torch
+unsloth_cache_dir: /mnt/d/AgenticEngineeringNetwork/training/cache/unsloth

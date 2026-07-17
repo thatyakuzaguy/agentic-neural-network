@@ -1,0 +1,9 @@
+title = "ANN public repository secret scanning"
+
+[allowlist]
+description = "Deterministic test-only sentinels; never valid credentials"
+regexes = [
+  '''sk-abcdefghijklmnopqrstuvwxyz''',
+  '''LOCAL_TEST_TOKEN''',
+  '''I_APPROVE'''
+]

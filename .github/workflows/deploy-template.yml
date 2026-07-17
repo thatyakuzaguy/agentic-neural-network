@@ -1,0 +1,35 @@
+name: Deploy Template
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_provider:
+        description: Deployment provider such as fly, render, azure, aws, gcp, or manual
+        required: true
+        default: manual
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: production
+    env:
+      DEPLOY_PROVIDER: ${{ inputs.deploy_provider || vars.DEPLOY_PROVIDER || 'manual' }}
+      REGISTRY_IMAGE: ${{ vars.REGISTRY_IMAGE }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+      STRIPE_PRICE_ID: ${{ secrets.STRIPE_PRICE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - run: docker compose config --quiet
+      - run: docker compose build api web
+      - name: Deployment handoff
+        run: |
+          echo "DEPLOY_PROVIDER=$DEPLOY_PROVIDER"
+          echo "Build completed. Add provider-specific CLI commands here after secrets and cloud targets are configured."

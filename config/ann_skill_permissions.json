@@ -1,0 +1,15 @@
+{
+  "documentation": {
+    "network": "ASK_ALWAYS"
+  },
+  "github": {
+    "git_read": "ASK_ALWAYS",
+    "network": "ASK_ALWAYS"
+  },
+  "internet_search": {
+    "network": "DENY"
+  },
+  "package_registry": {
+    "network": "ASK_ALWAYS"
+  }
+}

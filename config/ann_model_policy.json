@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "allow_real_model_load": false,
+  "allow_model_download": false,
+  "allow_training": false,
+  "allow_adapter_write": false,
+  "allow_dataset_write": false,
+  "max_loaded_models": 1,
+  "vram_policy": "SEQUENTIAL",
+  "default_backend": "mock",
+  "model_role_permissions": {
+    "qwen3_4b_conversation_orchestrator": {
+      "role": "CONVERSATION_ORCHESTRATOR",
+      "allowed_capabilities": [
+        "conversation",
+        "intent_detection",
+        "requirement_extraction",
+        "constraint_extraction",
+        "ambiguity_detection",
+        "workflow_selection",
+        "context_management",
+        "prompt_compilation",
+        "response_explanation",
+        "tool_request_generation"
+      ],
+      "filesystem_read": false,
+      "filesystem_write": false,
+      "shell_execution": false,
+      "patch_application": false,
+      "dependency_installation": false,
+      "network_access": false,
+      "direct_agent_execution": false,
+      "policy_override": false,
+      "model_activation_override": false
+    }
+  },
+  "allowed_backends": [
+    "mock",
+    "embedded",
+    "llama_cpp",
+    "qwen_local",
+    "deepseek_unsloth"
+  ]
+}

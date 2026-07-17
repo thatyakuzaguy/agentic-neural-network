@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-engineering-network"
+version = "0.1.1"
+description = "A local multi-agent software engineering network for planning, generating, testing, reviewing, and packaging full-stack systems."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.8.0",
+  "sqlalchemy>=2.0.0",
+  "psycopg[binary]>=3.2.0",
+  "python-dotenv>=1.0.1",
+  "stripe>=12.0.0",
+]
+
+[project.optional-dependencies]
+desktop = [
+  "PySide6>=6.7.0",
+]
+local-models = [
+  "llama-cpp-python>=0.3.16",
+]
+dev = [
+  "pytest>=8.2.0",
+  "pytest-asyncio>=0.23.0",
+  "ruff>=0.6.0",
+  "mypy>=1.11.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+pythonpath = [
+  "packages/agents",
+  "packages/orchestration",
+  "packages/sandbox",
+  "packages/git",
+  "packages/logs",
+  "packages/shared",
+  "packages/database",
+  "packages/security",
+  "apps/api",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentic_network*"]
+exclude = [
+  "apps*",
+  "data*",
+  "dataset_curation*",
+  "dataset_generation*",
+  "installer*",
+  "knowledge*",
+  "logs*",
+  "memory*",
+  "models*",
+  "outputs*",
+  "packages*",
+  "project_runs*",
+  "releases*",
+  "results*",
+  "tests*",
+  "training*",
+  "work*",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
