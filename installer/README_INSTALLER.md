@@ -250,6 +250,19 @@ The harness never downloads dependencies, loads a model, or performs
 inference. Windows Sandbox must be enabled by an administrator before `-Launch`
 can proceed.
 
+On Windows 11 Pro, Enterprise, or Education, inspect and enable the optional
+feature from an elevated PowerShell session, then restart Windows when the
+command requests it:
+
+```powershell
+Get-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM
+Enable-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -All
+```
+
+Enabling the feature changes the host operating system and is deliberately not
+performed by ANN's release scripts. After the restart, confirm that
+`C:\Windows\System32\WindowsSandbox.exe` exists before using `-Launch`.
+
 The script requires `signtool.exe` from the Windows SDK and refuses to create or use fake release certificates. Final release verification requires trusted Authenticode signatures with a timestamp authority on both `ANN_Setup.exe` and `ANN_Uninstall.exe`.
 
 The release certificate must be non-expired, non-self-signed, importable with its private key on the release machine, and include the Code Signing Enhanced Key Usage.

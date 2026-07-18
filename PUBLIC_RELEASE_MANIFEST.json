@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T17:40:24.8323201Z",
+  "generated_at_utc": "2026-07-18T17:47:02.0249392Z",
   "release_stage": "release-candidate",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
   "file_count": 798,
-  "total_bytes": 5759467,
+  "total_bytes": 5760044,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -2024,8 +2024,8 @@
     },
     {
       "path": "installer/README_INSTALLER.md",
-      "bytes": 11186,
-      "sha256": "9b071fcc350d923f12308eb93a5b51044ba62d4cd4f3902eedb73dacf0b554c3"
+      "bytes": 11763,
+      "sha256": "e60b4c272b191a5a7d9bee99e30f559efa1e7be7da5bd4a82ce6e39adcfb699b"
     },
     {
       "path": "installer/README_OFFLINE_RELEASE.md",
