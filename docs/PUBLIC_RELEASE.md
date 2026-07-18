@@ -59,13 +59,19 @@ Dependabot so the nested fix can be adopted when upstream publishes it.
 
 ## Release Candidate Status
 
-The `v0.1.4-rc.3` source candidate has passed the development-tree Python,
-Ruff, frontend, Docker Compose, embedded runtime, split-bundle, installed API,
-and native Desktop gates. Exported-tree and fresh-clone validation must be
-repeated after the RC3 source export. The candidate remains intentionally a
-prerelease. ANN must not be declared `FINAL_RELEASE_READY` until both of these
-external gates have real,
-matching evidence:
+The [`v0.1.4-rc.3`](https://github.com/thatyakuzaguy/agentic-neural-network/releases/tag/v0.1.4-rc.3)
+source candidate is published from commit
+`aca2c5ad10443df5073fd919d79e878c8f5e55bd`. It passed the development-tree
+Python suite, Ruff, frontend checks, Docker Compose, embedded runtime,
+split-bundle, installed API, and native Desktop gates. The exact public export
+then passed 1,533 tests with 54 explicitly skipped private-evidence tests, and
+all seven GitHub workflows completed successfully. Its nine release assets
+(4,396,352,636 bytes) were compared with the local files by size and GitHub's
+SHA-256 digest.
+
+The candidate remains intentionally a prerelease. ANN must not be declared
+`FINAL_RELEASE_READY` until both of these external gates have real, matching
+evidence:
 
 - timestamped Authenticode signatures from a trusted code-signing certificate;
 - transferred validation evidence from a separate clean Windows 11 machine.

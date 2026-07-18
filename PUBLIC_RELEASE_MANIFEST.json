@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T16:42:27.8515826Z",
+  "generated_at_utc": "2026-07-18T17:40:24.8323201Z",
   "release_stage": "release-candidate",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
   "file_count": 798,
-  "total_bytes": 5759116,
+  "total_bytes": 5759467,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -1959,8 +1959,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "bytes": 3590,
-      "sha256": "0068e75f2c3518def6a9a3e4aaa43e72efa71bd166eeb2e53822f72b084d4513"
+      "bytes": 3941,
+      "sha256": "e7821208823720aae8ef667a8f5a6b8b27e92daee6386d67e386bf433fb5e9e8"
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
