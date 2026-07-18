@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T00:11:35.0425051Z",
+  "generated_at_utc": "2026-07-18T00:21:47.6780664Z",
   "release_stage": "public-alpha",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
   "file_count": 773,
-  "total_bytes": 5554563,
+  "total_bytes": 5559038,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -44,8 +44,8 @@
     },
     {
       "path": ".github/workflows/test.yml",
-      "bytes": 625,
-      "sha256": "01eeac49ba2f23ba33e1551b8a7a77610095106f4903ad5ea0213cffe4739bbc"
+      "bytes": 899,
+      "sha256": "148afc76dac9fc1cb7a0b1b85d52f49401def6da9b5ce3b37b79e3e63a921028"
     },
     {
       "path": ".gitignore",
@@ -1929,8 +1929,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "bytes": 2573,
-      "sha256": "ae8d29b7ec284b6ae47fe4d3c46709b8bc42eae48e249ecbbb1348ab078f2b1c"
+      "bytes": 2822,
+      "sha256": "4e14a4edcc058d05f17c7f50974b92cd42b853896af51c8c69bc680e6cf5b306"
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
@@ -2454,8 +2454,8 @@
     },
     {
       "path": "tests/python/conftest.py",
-      "bytes": 4019,
-      "sha256": "0d1bf8b384d6eefd7520a276887479630f3e5f5ea9e8aeb05f1fb2a8136cc94b"
+      "bytes": 7971,
+      "sha256": "0fa7c437b3511483f6d6a701782b082948251069964f12db6815d97003f76d41"
     },
     {
       "path": "tests/python/test_action_planner_agent_runtime.py",

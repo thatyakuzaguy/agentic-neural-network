@@ -37,12 +37,16 @@ Do not publish when tests, lint, build, secret scanning, or size validation
 fails.
 
 The public tree contains `PUBLIC_RELEASE_MANIFEST.json`. When pytest detects
-that manifest it visibly skips 21 tests marked `private_release_evidence`.
-Those tests require local launcher binaries, embedded-runtime payloads, signing
-evidence, model inference evidence, or historical release bundles that must not
-be committed. All portable runtime, orchestration, safety, API, UI, and project
-builder tests still run. The development repository runs the private evidence
-tests because it has no public manifest.
+that manifest it visibly skips an explicit allowlist of 52 tests marked
+`private_release_evidence`. Those tests require local launcher binaries,
+embedded-runtime payloads, wheelhouse contents, signing evidence, model
+inference evidence, canonical-install release notes, or historical release
+bundles that must not be committed. The Windows CI job maps the source checkout
+to the supported `D:\AgenticEngineeringNetwork` path so source-level path
+contracts still run rather than being hidden. All portable runtime,
+orchestration, safety, API, UI, and project builder tests continue to run. The
+development repository runs the private evidence tests because it has no public
+manifest.
 
 ## Dependency Audit
 
