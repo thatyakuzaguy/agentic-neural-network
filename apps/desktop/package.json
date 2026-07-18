@@ -13,9 +13,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@electron/packager": "19.0.1",
-    "electron": "42.3.3",
-    "electron-builder": "26.8.1"
+    "@electron/packager": "19.1.1",
+    "electron": "42.7.0",
+    "electron-builder": "26.15.3"
   },
   "build": {
     "appId": "local.agentic-engineering-network.desktop",
