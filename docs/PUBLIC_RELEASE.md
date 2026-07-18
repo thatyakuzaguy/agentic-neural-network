@@ -37,7 +37,7 @@ Do not publish when tests, lint, build, secret scanning, or size validation
 fails.
 
 The public tree contains `PUBLIC_RELEASE_MANIFEST.json`. When pytest detects
-that manifest it visibly skips an explicit allowlist of 52 tests marked
+that manifest it visibly skips an explicit allowlist of 53 tests marked
 `private_release_evidence`. Those tests require local launcher binaries,
 embedded-runtime payloads, wheelhouse contents, signing evidence, model
 inference evidence, canonical-install release notes, or historical release

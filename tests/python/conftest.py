@@ -49,6 +49,7 @@ MACHINE_LOCAL_CONTRACT_TESTS = frozenset(
         "tests/python/test_beta_candidate_final_gate.py::test_beta_candidate_final_gate_blocked_and_safe",
         "tests/python/test_clean_machine_evidence.py::test_clean_machine_evidence_reports_local_install_smoke_without_claiming_final_release",
         "tests/python/test_clean_machine_evidence.py::test_clean_machine_evidence_accepts_strong_external_marker",
+        "tests/python/test_code_signing_readiness.py::test_installer_launchers_are_auditable_and_do_not_use_shell_execute",
         "tests/python/test_controlled_first_inference_gate.py::test_controlled_first_inference_gate_blocked_no_load_no_inference",
         "tests/python/test_final_release_readiness_bridge.py::test_final_release_readiness_bridge_blocked",
         "tests/python/test_first_real_inference_readiness.py::test_first_real_inference_readiness_not_ready_and_no_load",

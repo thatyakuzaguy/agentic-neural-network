@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-18T00:21:47.6780664Z",
+  "generated_at_utc": "2026-07-18T00:26:03.2754166Z",
   "release_stage": "public-alpha",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
   "file_count": 773,
-  "total_bytes": 5559038,
+  "total_bytes": 5559162,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -1930,7 +1930,7 @@
     {
       "path": "docs/PUBLIC_RELEASE.md",
       "bytes": 2822,
-      "sha256": "4e14a4edcc058d05f17c7f50974b92cd42b853896af51c8c69bc680e6cf5b306"
+      "sha256": "f1f87d3354a166bea8f3c39167c5f6a6f781a3aa3769bdf2920ea41cfe27af46"
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
@@ -2454,8 +2454,8 @@
     },
     {
       "path": "tests/python/conftest.py",
-      "bytes": 7971,
-      "sha256": "0fa7c437b3511483f6d6a701782b082948251069964f12db6815d97003f76d41"
+      "bytes": 8095,
+      "sha256": "ae245c099362773ac09539783bad846107b0a8fda1219a001005a3d6589d8649"
     },
     {
       "path": "tests/python/test_action_planner_agent_runtime.py",
