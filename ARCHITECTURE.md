@@ -1,6 +1,6 @@
 # Architecture
 
-Agentic Engineering Network is a local, Docker-first, approval-gated engineering platform.
+ANN (Agentic Neural Network) is a local, Docker-first, approval-gated engineering platform.
 
 ## System Diagram
 

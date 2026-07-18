@@ -14,7 +14,7 @@ powershell -ExecutionPolicy Bypass -File scripts\release\build-public-repository
 The export is created at:
 
 ```text
-D:\AgenticEngineeringNetwork\releases\github-public\agentic-neural-network
+D:\AgenticEngineeringNetwork\releases\github-public\ANN
 ```
 
 The script:
@@ -59,7 +59,7 @@ Dependabot so the nested fix can be adopted when upstream publishes it.
 
 ## Release Candidate Status
 
-The [`v0.1.4-rc.3`](https://github.com/thatyakuzaguy/agentic-neural-network/releases/tag/v0.1.4-rc.3)
+The [`v0.1.4-rc.3`](https://github.com/thatyakuzaguy/ANN/releases/tag/v0.1.4-rc.3)
 source candidate is published from commit
 `aca2c5ad10443df5073fd919d79e878c8f5e55bd`. It passed the development-tree
 Python suite, Ruff, frontend checks, Docker Compose, embedded runtime,

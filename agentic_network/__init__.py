@@ -1,2 +1,1 @@
-"""Local multi-agent pipeline for Agentic Engineering Network."""
-
+"""Local multi-agent pipeline for ANN (Agentic Neural Network)."""

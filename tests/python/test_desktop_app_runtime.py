@@ -535,7 +535,7 @@ def test_desktop_app_creates_native_window_when_qt_is_available(tmp_path: Path) 
     )
     window = create_main_window(DesktopDataStore(root), workspace_store)
 
-    assert window.windowTitle() == "Agentic Engineering Network"
+    assert window.windowTitle() == "ANN (Agentic Neural Network)"
     assert window.sidebar.count() == len(primary_navigation_labels())
     window.close()
     app.quit()

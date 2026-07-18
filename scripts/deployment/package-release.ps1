@@ -4,7 +4,7 @@ Set-Location $Root
 
 $Version = "0.1.3"
 $ReleaseRoot = Join-Path $Root "releases"
-$PackageName = "AgenticEngineeringNetwork-$Version"
+$PackageName = "ANN-$Version"
 $Stage = Join-Path $ReleaseRoot $PackageName
 $Out = Join-Path $ReleaseRoot "$PackageName.zip"
 $Manifest = Join-Path $ReleaseRoot "$PackageName.manifest.txt"
@@ -94,8 +94,8 @@ Set-Content -LiteralPath $Launcher -Encoding ASCII -Value @(
     "@echo off",
     "setlocal",
     "cd /d %~dp0",
-    "if exist ""apps\desktop\dist\Agentic Engineering Network-win32-x64\Agentic Engineering Network.exe"" (",
-    "  start """" ""apps\desktop\dist\Agentic Engineering Network-win32-x64\Agentic Engineering Network.exe""",
+    "if exist ""apps\desktop\dist\ANN-win32-x64\ANN.exe"" (",
+    "  start """" ""apps\desktop\dist\ANN-win32-x64\ANN.exe""",
     ") else (",
     "  powershell.exe -NoProfile -ExecutionPolicy Bypass -File start.ps1",
     ")",
@@ -104,7 +104,7 @@ Set-Content -LiteralPath $Launcher -Encoding ASCII -Value @(
 
 $PackageReadme = Join-Path $Stage "PACKAGE_README.md"
 Set-Content -LiteralPath $PackageReadme -Encoding UTF8 -Value @(
-    "# Agentic Engineering Network Package",
+    "# ANN (Agentic Neural Network) Package",
     "",
     "Version: $Version",
     "",
@@ -126,7 +126,7 @@ Set-Content -LiteralPath $PackageReadme -Encoding UTF8 -Value @(
     "",
     "Start with:",
     "",
-    "apps\desktop\dist\Agentic Engineering Network-win32-x64\Agentic Engineering Network.exe",
+    "apps\desktop\dist\ANN-win32-x64\ANN.exe",
     "",
     "Or use:",
     "",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "repository_name": "agentic-neural-network",
+  "repository_name": "ANN",
   "release_stage": "release-candidate",
   "maximum_file_size_mb": 25,
   "source_directories": [

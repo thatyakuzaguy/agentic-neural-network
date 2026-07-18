@@ -42,7 +42,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File installer\install_ann.ps1 `
   -SourceRoot D:\AgenticEngineeringNetwork `
   -InstallRoot D:\ANN `
   -RuntimeSource D:\ANN\runtime `
-  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\Agentic Engineering Network-win32-x64"
+  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\ANN-win32-x64"
 ```
 
 ### Complete offline installation with local models
@@ -56,7 +56,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File installer\install_ann.ps1 `
   -SourceRoot D:\AgenticEngineeringNetwork `
   -InstallRoot D:\ANN `
   -RuntimeSource D:\ANN\runtime `
-  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\Agentic Engineering Network-win32-x64" `
+  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\ANN-win32-x64" `
   -ModelSource D:\AgenticEngineeringNetwork\outputs\release_final\model_pack `
   -ModelInstallMode HardLink `
   -RequireModels
@@ -231,7 +231,7 @@ Prepare the `.wsb` file and inspect blockers without launching anything:
 powershell -ExecutionPolicy Bypass -File scripts\release\invoke-windows-sandbox-validation.ps1 `
   -SourceRoot D:\AgenticEngineeringNetwork `
   -RuntimeSource D:\ANN\runtime `
-  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\Agentic Engineering Network-win32-x64"
+  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\ANN-win32-x64"
 ```
 
 After both installers are valid and timestamped, signing evidence exists, the
@@ -242,7 +242,7 @@ validation explicitly:
 powershell -ExecutionPolicy Bypass -File scripts\release\invoke-windows-sandbox-validation.ps1 `
   -SourceRoot D:\AgenticEngineeringNetwork `
   -RuntimeSource D:\ANN\runtime `
-  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\Agentic Engineering Network-win32-x64" `
+  -DesktopSource "D:\AgenticEngineeringNetwork\apps\desktop\dist\ANN-win32-x64" `
   -Launch
 ```
 

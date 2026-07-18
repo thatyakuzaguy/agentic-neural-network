@@ -287,7 +287,7 @@ if PYSIDE6_AVAILABLE:
             self.project_manager = self.workspace_store.project_manager
             self.store = store or self._store_for_active_project()
             self.current_bundle: RunBundle | None = None
-            self.setWindowTitle("Agentic Engineering Network")
+            self.setWindowTitle("ANN (Agentic Neural Network)")
             self.resize(1480, 920)
 
             self.sidebar = create_sidebar(primary_only=True, compact=True)

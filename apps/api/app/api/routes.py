@@ -73,7 +73,7 @@ def evidence_store() -> EvidenceStore:
 
 @router.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "agentic-engineering-network-api"}
+    return {"status": "ok", "service": "ann-api"}
 
 
 @router.get("/readinessz")

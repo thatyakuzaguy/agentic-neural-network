@@ -12,7 +12,7 @@ if (-not $OutputDirectory.StartsWith($Root, [System.StringComparison]::OrdinalIg
 
 New-Item -ItemType Directory -Force -Path $OutputDirectory | Out-Null
 $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-$fileName = "agentic-engineering-network-$timestamp.dump"
+$fileName = "ann-$timestamp.dump"
 $containerPath = "/tmp/$fileName"
 $hostPath = Join-Path $OutputDirectory $fileName
 $postgresUser = if ($env:POSTGRES_USER) { $env:POSTGRES_USER } else { "agentic" }

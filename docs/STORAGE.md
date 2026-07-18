@@ -1,6 +1,6 @@
 # Storage and C Drive Usage
 
-Agentic Engineering Network stores project files under `D:\AgenticEngineeringNetwork`, but some host tools can still use `C:` unless configured.
+ANN stores project files under `D:\AgenticEngineeringNetwork`, but some host tools can still use `C:` unless configured.
 
 ## Current Main Cause
 

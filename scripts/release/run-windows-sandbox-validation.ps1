@@ -27,7 +27,7 @@ try {
   foreach ($requiredSource in @(
     "C:\ANNWork\sources\source",
     "C:\ANNWork\sources\runtime\python\python.exe",
-    "C:\ANNWork\sources\desktop\Agentic Engineering Network.exe",
+    "C:\ANNWork\sources\desktop\ANN.exe",
     "C:\ANNWork\sources\installer\ANN_Setup.exe",
     "C:\ANNWork\sources\handoff\RELEASE_TRANSFER_MANIFEST.json"
   )) {

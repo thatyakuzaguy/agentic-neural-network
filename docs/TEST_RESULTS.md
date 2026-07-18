@@ -136,11 +136,11 @@ The high `VmmemWSL` CPU usage observed during `docker compose build api` was the
 
 ```text
 npm --workspace apps/desktop run package
-Wrote new app to: dist\Agentic Engineering Network-win32-x64
+Wrote new app to: dist\ANN-win32-x64
 ```
 
 ```text
-D:\AgenticEngineeringNetwork\apps\desktop\dist\Agentic Engineering Network-win32-x64\Agentic Engineering Network.exe
+D:\AgenticEngineeringNetwork\apps\desktop\dist\ANN-win32-x64\ANN.exe
 Desktop packaged exe started: True
 ```
 

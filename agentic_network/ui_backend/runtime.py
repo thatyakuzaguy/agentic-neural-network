@@ -66,7 +66,7 @@ def create_app(
     from agentic_network.terminal_agent.runtime import run_terminal_command
 
     app = FastAPI(
-        title="Agentic Engineering Network UI",
+        title="ANN (Agentic Neural Network) UI",
         version="5.0.0",
         description="Local read-only dashboard for ANN runs.",
     )

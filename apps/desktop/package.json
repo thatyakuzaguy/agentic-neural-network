@@ -2,13 +2,13 @@
   "name": "@aen/desktop",
   "private": true,
   "version": "0.1.4-rc.3",
-  "description": "Desktop shell for Agentic Engineering Network",
+  "description": "Desktop shell for ANN (Agentic Neural Network)",
   "main": "src/main.js",
-  "author": "Agentic Engineering Network",
+  "author": "ANN contributors",
   "license": "MIT",
   "scripts": {
     "dev": "electron .",
-    "package": "electron-packager . \"Agentic Engineering Network\" --platform=win32 --arch=x64 --electron-version=42.3.3 --out=dist --overwrite --asar --ignore=\"^dist($|/)\"",
+    "package": "electron-packager . \"ANN\" --platform=win32 --arch=x64 --electron-version=42.3.3 --out=dist --overwrite --asar --ignore=\"^dist($|/)\"",
     "package:portable": "electron-builder --win portable --x64"
   },
   "dependencies": {},
@@ -19,7 +19,7 @@
   },
   "build": {
     "appId": "local.agentic-engineering-network.desktop",
-    "productName": "Agentic Engineering Network",
+    "productName": "ANN",
     "electronVersion": "42.3.3",
     "asar": true,
     "directories": {

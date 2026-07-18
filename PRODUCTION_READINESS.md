@@ -1,6 +1,6 @@
 # Production Readiness
 
-Agentic Engineering Network now exposes a SaaS production-readiness module through `/api/readiness` and the `Production Readiness` workbench panel.
+ANN (Agentic Neural Network) exposes a SaaS production-readiness module through `/api/readiness` and the `Production Readiness` workbench panel.
 
 This module reduces launch risk. It does not guarantee that a generated SaaS is sellable, legally compliant, or operationally complete without human product, engineering, security, and legal review.
 

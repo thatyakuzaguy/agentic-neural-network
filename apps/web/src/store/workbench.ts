@@ -31,7 +31,7 @@ export const useWorkbench = create<WorkbenchState>()(
     (set) => ({
       activeRun: null,
       terminalLines: [
-        "Agentic Engineering Network terminal is approval-gated.",
+        "ANN terminal is approval-gated.",
         "Commands are proposed for Docker sandbox execution before they can run."
       ],
       messages: [

@@ -278,7 +278,7 @@ if (-not $DesktopSource) {
     $DesktopSource = $payloadDesktop
   } else {
     $DesktopSource = Get-ChildItem -LiteralPath (Join-Path $appSource "apps\desktop\dist") -Directory -ErrorAction SilentlyContinue |
-      Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName "Agentic Engineering Network.exe") } |
+      Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName "ANN.exe") } |
       Select-Object -First 1 -ExpandProperty FullName
   }
 }
@@ -335,7 +335,7 @@ foreach ($name in @(
 }
 
 $python = Join-Path $InstallRoot "runtime\python\python.exe"
-$desktopExe = Join-Path $InstallRoot "desktop\Agentic Engineering Network.exe"
+$desktopExe = Join-Path $InstallRoot "desktop\ANN.exe"
 if (-not (Test-Path -LiteralPath $python -PathType Leaf)) { throw "Embedded Python missing after install: $python" }
 if (-not (Test-Path -LiteralPath $desktopExe -PathType Leaf)) { throw "ANN Desktop executable missing after install: $desktopExe" }
 $env:PYTHONPATH = $InstallRoot

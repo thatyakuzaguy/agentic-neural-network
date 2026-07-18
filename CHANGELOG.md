@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Renamed the public product and repository to ANN (Agentic Neural Network),
+  while retaining compatibility identifiers used by existing installations.
+- Renamed the packaged Windows desktop executable to `ANN.exe` and updated
+  installer, validation, and release tooling to the new product identity.
+
 ## 0.1.4-rc.3 - 2026-07-18
 
 - Added a preparation-first Windows Sandbox harness for isolated final-release

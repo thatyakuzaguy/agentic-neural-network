@@ -11,8 +11,10 @@ if ([string]::IsNullOrWhiteSpace($SourceRoot)) {
 }
 $SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
 $ReleaseRoot = [IO.Path]::GetFullPath((Join-Path $SourceRoot "releases\github-public"))
+$configPath = Join-Path $SourceRoot "config\public-release.json"
+$config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
 if ([string]::IsNullOrWhiteSpace($Destination)) {
-    $Destination = Join-Path $ReleaseRoot "agentic-neural-network"
+    $Destination = Join-Path $ReleaseRoot ([string]$config.repository_name)
 }
 $Destination = [IO.Path]::GetFullPath($Destination)
 
@@ -24,8 +26,6 @@ if ($Destination -eq $SourceRoot) {
     throw "Public repository destination cannot be the development repository."
 }
 
-$configPath = Join-Path $SourceRoot "config\public-release.json"
-$config = Get-Content -LiteralPath $configPath -Raw | ConvertFrom-Json
 $maxBytes = [int64]$config.maximum_file_size_mb * 1MB
 
 $excludedSegments = @(

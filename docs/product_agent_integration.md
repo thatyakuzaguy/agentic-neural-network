@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Product Agent is the first stage of the local Agentic Engineering Network pipeline. It receives
+The Product Agent is the first stage of the local ANN pipeline. It receives
 a short software or product instruction and converts it into grounded product analysis before any
 planning, architecture, coding, or testing stage runs.
 
@@ -133,4 +133,3 @@ PRODUCT_AGENT_CONFIG_PATH=/mnt/d/AgenticEngineeringNetwork/training/configs/qwen
 
 When `PRODUCT_MODEL_BACKEND=qwen3`, the product stage uses the stable Product Agent adapter rather
 than the generic Qwen3 base model.
-

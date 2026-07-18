@@ -3,7 +3,7 @@ import "./globals.css";
 import { QueryProvider } from "@/lib/query-provider";
 
 export const metadata: Metadata = {
-  title: "Agentic Engineering Network",
+  title: "ANN (Agentic Neural Network)",
   description: "Local approval-gated multi-agent engineering platform"
 };
 
@@ -16,4 +16,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-

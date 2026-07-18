@@ -4,7 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$desktop = Join-Path $InstallRoot "desktop\Agentic Engineering Network.exe"
+$desktop = Join-Path $InstallRoot "desktop\ANN.exe"
 $launcher = Join-Path $InstallRoot "installer\ann_launcher.ps1"
 if (-not $ShortcutLocation) {
   $ShortcutLocation = Join-Path ([Environment]::GetFolderPath("Desktop")) "ANN Desktop.lnk"

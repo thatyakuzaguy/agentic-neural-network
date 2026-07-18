@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 describe("workbench panels", () => {
   it("keeps a simple smoke invariant", () => {
-    expect("Agentic Engineering Network").toContain("Engineering");
+    expect("ANN (Agentic Neural Network)").toContain("Neural Network");
   });
 
   it("exposes senior review and production readiness panels", () => {

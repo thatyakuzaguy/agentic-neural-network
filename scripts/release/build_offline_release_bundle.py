@@ -158,7 +158,7 @@ def _detect_desktop_root(repo_root: Path) -> Path:
     candidates = sorted(
         path
         for path in dist.iterdir()
-        if path.is_dir() and (path / "Agentic Engineering Network.exe").is_file()
+        if path.is_dir() and (path / "ANN.exe").is_file()
     ) if dist.is_dir() else []
     if len(candidates) != 1:
         raise FileNotFoundError(f"Expected exactly one packaged ANN Desktop directory under {dist}")

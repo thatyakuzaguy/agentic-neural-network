@@ -82,7 +82,7 @@ class AgenticEngineeringNetwork:
             workspace.propose_file(
                 path,
                 content,
-                requested_by="Agentic Engineering Network",
+                requested_by="ANN (Agentic Neural Network)",
                 metadata={"run_id": run_id, "gate": "file_write"},
             )
             for path, content in files.items()

@@ -135,7 +135,7 @@ Windows runtime may also be used. Cloud APIs are optional, not required.
 ## Quick Start From Source
 
 ```powershell
-git clone https://github.com/ThatYakuzaGuy/agentic-neural-network.git D:\AgenticEngineeringNetwork
+git clone https://github.com/ThatYakuzaGuy/ANN.git D:\AgenticEngineeringNetwork
 Set-Location D:\AgenticEngineeringNetwork
 Copy-Item .env.example .env
 .\setup.ps1

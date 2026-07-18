@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $python = Join-Path $InstallRoot "runtime\python\python.exe"
-$desktop = Join-Path $InstallRoot "desktop\Agentic Engineering Network.exe"
+$desktop = Join-Path $InstallRoot "desktop\ANN.exe"
 if (-not (Test-Path -LiteralPath $python -PathType Leaf)) { throw "Embedded Python missing: $python" }
 if (-not (Test-Path -LiteralPath $desktop -PathType Leaf)) { throw "Desktop executable missing: $desktop" }
 $env:PYTHONPATH = $InstallRoot

@@ -94,7 +94,7 @@ def test_shortcut_planned(tmp_path: Path) -> None:
 
     assert result.status == "CREATED"
     assert result.shortcut_path.endswith("ANN Desktop.lnk.cmd")
-    assert result.target_path.endswith("desktop\\Agentic Engineering Network.exe")
+    assert result.target_path.endswith("desktop\\ANN.exe")
 
 
 def test_uninstall_preserves_projects_by_default() -> None:

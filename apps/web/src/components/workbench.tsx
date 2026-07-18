@@ -119,7 +119,7 @@ export function Workbench() {
     <main className="flex h-screen flex-col bg-canvas">
       <header className="flex h-14 shrink-0 items-center justify-between border-b border-line bg-panel px-4">
         <div>
-          <h1 className="text-base font-semibold">Agentic Engineering Network</h1>
+          <h1 className="text-base font-semibold">ANN (Agentic Neural Network)</h1>
           <p className="text-xs text-muted">Resizable local multi-agent engineering workbench</p>
         </div>
         <div className="flex items-center gap-2">

@@ -53,7 +53,7 @@ if (-not $SourceRoot) {
   $SourceRoot = $repoRoot
 }
 if (-not $DesktopSource) {
-  $DesktopSource = Join-Path $repoRoot "apps\desktop\dist\Agentic Engineering Network-win32-x64"
+  $DesktopSource = Join-Path $repoRoot "apps\desktop\dist\ANN-win32-x64"
 }
 if (-not $InstallerRoot) {
   $InstallerRoot = Join-Path $repoRoot "installer"
@@ -100,7 +100,7 @@ if (-not (Test-Path -LiteralPath $source -PathType Container)) { $blockers.Add("
 if (-not (Test-Path -LiteralPath (Join-Path $source "agentic_network") -PathType Container)) { $blockers.Add("source_app_missing") }
 if (-not (Test-Path -LiteralPath (Join-Path $source "apps\web\.next\standalone") -PathType Container)) { $blockers.Add("source_web_standalone_missing") }
 if (-not (Test-Path -LiteralPath (Join-Path $runtime "python\python.exe") -PathType Leaf)) { $blockers.Add("runtime_python_missing") }
-if (-not (Test-Path -LiteralPath (Join-Path $desktop "Agentic Engineering Network.exe") -PathType Leaf)) { $blockers.Add("desktop_executable_missing") }
+if (-not (Test-Path -LiteralPath (Join-Path $desktop "ANN.exe") -PathType Leaf)) { $blockers.Add("desktop_executable_missing") }
 if (-not (Test-Path -LiteralPath $installer -PathType Container)) { $blockers.Add("installer_root_missing") }
 if (-not (Test-Path -LiteralPath $bundle -PathType Container)) { $blockers.Add("bundle_root_missing") }
 if (-not (Test-Path -LiteralPath $bootstrap -PathType Leaf)) { $blockers.Add("sandbox_bootstrap_missing") }

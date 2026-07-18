@@ -89,7 +89,7 @@ function createWindow() {
 function setAppMenu() {
   const template = [
     {
-      label: "Agentic Engineering Network",
+      label: "ANN",
       submenu: [
         { label: "Reload", accelerator: "Ctrl+R", click: () => mainWindow?.reload() },
         { label: "Open API Docs", click: () => shell.openExternal("http://localhost:8000/docs") },

@@ -180,7 +180,7 @@ def create_shortcut(install_root: str | Path, shortcut_location: str | Path | No
 
     root = normalize_install_path(install_root)
     errors = _validate_mutation_root(root)
-    target = root / "desktop" / "Agentic Engineering Network.exe"
+    target = root / "desktop" / "ANN.exe"
     shortcut = normalize_install_path(shortcut_location) if shortcut_location else root / "ANN Desktop.lnk.cmd"
     if not is_relative_to(shortcut.parent.resolve(), root) and shortcut_location is None:
         errors.append("shortcut_location_invalid")
@@ -264,7 +264,7 @@ def _validate_mutation_root(root: Path) -> list[str]:
 
 
 def _launcher_script(root: Path) -> str:
-    desktop = root / "desktop" / "Agentic Engineering Network.exe"
+    desktop = root / "desktop" / "ANN.exe"
     python = root / "runtime" / "python" / "python.exe"
     return "\n".join(
         [

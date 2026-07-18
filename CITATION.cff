@@ -7,7 +7,7 @@ authors:
 version: 0.1.4-rc.2
 date-released: 2026-07-18
 license: MIT
-repository-code: "https://github.com/ThatYakuzaGuy/agentic-neural-network"
+repository-code: "https://github.com/ThatYakuzaGuy/ANN"
 keywords:
   - local-first
   - multi-agent systems

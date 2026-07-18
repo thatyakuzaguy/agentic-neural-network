@@ -3,7 +3,7 @@ param([string]$InstallRoot = "D:\ANN")
 $ErrorActionPreference = "Stop"
 $InstallRoot = [System.IO.Path]::GetFullPath($InstallRoot).TrimEnd('\')
 if ($InstallRoot -match '^[Cc]:\\') { throw "C:\ launch roots are blocked by default." }
-$desktop = Join-Path $InstallRoot "desktop\Agentic Engineering Network.exe"
+$desktop = Join-Path $InstallRoot "desktop\ANN.exe"
 $python = Join-Path $InstallRoot "runtime\python\python.exe"
 
 if (Test-Path -LiteralPath $desktop -PathType Leaf) {
