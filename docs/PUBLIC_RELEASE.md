@@ -36,6 +36,21 @@ secret scanner such as Gitleaks against the complete Git history before push.
 Do not publish when tests, lint, build, secret scanning, or size validation
 fails.
 
+Normal push and pull-request CI runs the repository verifier with
+`-AllowContentDrift`. This still rejects unsafe manifest paths, missing files,
+new unlisted tracked files, and tracked-file count mismatches, while allowing a
+dependency or source PR to change the size and hash of existing files. Without
+that mode, every legitimate Dependabot update would fail before its tests ran.
+
+Release preparation must use strict verification after rebuilding the export:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\release\verify-public-repository.ps1
+```
+
+Strict mode validates every recorded byte count and SHA-256 hash. It remains a
+release gate and is not replaced by the structural CI check.
+
 The public tree contains `PUBLIC_RELEASE_MANIFEST.json`. When pytest detects
 that manifest it visibly skips an explicit allowlist of 53 tests marked
 `private_release_evidence`. Those tests require local launcher binaries,

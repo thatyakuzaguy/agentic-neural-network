@@ -27,9 +27,9 @@ jobs:
           if (-not (Test-Path 'D:\AgenticEngineeringNetwork')) {
             New-Item -ItemType Junction -Path 'D:\AgenticEngineeringNetwork' -Target $env:GITHUB_WORKSPACE | Out-Null
           }
-      - name: Verify public release manifest
+      - name: Verify public repository structure
         shell: pwsh
-        run: ./scripts/release/verify-public-repository.ps1
+        run: ./scripts/release/verify-public-repository.ps1 -AllowContentDrift
       - name: Verify local documentation links
         run: python scripts/release/verify_markdown_links.py
       - run: python -m pip install --upgrade pip
