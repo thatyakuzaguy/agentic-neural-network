@@ -43,6 +43,7 @@ IMPORT_NAMES = (
 )
 FORBIDDEN_DISTRIBUTIONS = {
     "azure-core",
+    "diskcache",
     "jupyter",
     "jupyterlab",
     "langgraph",
@@ -51,6 +52,7 @@ FORBIDDEN_DISTRIBUTIONS = {
     "unsloth",
 }
 APPLICATION_DISTRIBUTIONS = {"agentic-engineering-network"}
+LLAMA_CPP_DISTRIBUTION = "llama-cpp-python"
 
 
 def canonical_name(value: str) -> str:
@@ -75,6 +77,23 @@ def parse_pinned_requirements(path: Path) -> dict[str, str]:
     if not requirements:
         raise ValueError("Release requirements are empty.")
     return requirements
+
+
+def pinned_requirement_lines(path: Path, *, exclude: set[str] | None = None) -> list[str]:
+    """Return pinned requirement lines while preserving extras and package spelling."""
+
+    excluded = {canonical_name(name) for name in (exclude or set())}
+    lines: list[str] = []
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        value = raw_line.strip()
+        if not value or value.startswith("#"):
+            continue
+        if "==" not in value:
+            raise ValueError(f"Release requirement is not exactly pinned: {value}")
+        name = canonical_name(value.split("==", 1)[0].split("[", 1)[0].strip())
+        if name not in excluded:
+            lines.append(value)
+    return lines
 
 
 def inspect_wheel(path: Path) -> dict[str, Any]:
@@ -174,6 +193,10 @@ def build_runtime(
         raise FileNotFoundError(f"Base Python executable is missing: {source_python}")
 
     if plan["acquire_missing_wheels"]:
+        safe_requirements = pinned_requirement_lines(
+            requirements,
+            exclude={LLAMA_CPP_DISTRIBUTION},
+        )
         run_checked(
             [
                 str(source_python),
@@ -185,8 +208,23 @@ def build_runtime(
                 str(wheelhouse),
                 "--find-links",
                 str(existing_wheelhouse),
-                "--requirement",
-                str(requirements),
+                *safe_requirements,
+            ],
+            cwd=REPO_ROOT,
+        )
+        run_checked(
+            [
+                str(source_python),
+                "-m",
+                "pip",
+                "download",
+                "--no-deps",
+                "--only-binary=:all:",
+                "--dest",
+                str(wheelhouse),
+                "--find-links",
+                str(existing_wheelhouse),
+                f"{LLAMA_CPP_DISTRIBUTION}=={plan['top_level_requirements'][LLAMA_CPP_DISTRIBUTION]}",
             ],
             cwd=REPO_ROOT,
         )
@@ -197,10 +235,23 @@ def build_runtime(
     wheels = sorted(wheelhouse.glob("*.whl"), key=lambda item: item.name.lower())
     if not wheels:
         raise RuntimeError("Candidate wheelhouse is empty; acquire the dependency closure first.")
+    wheel_entries = [inspect_wheel(path) for path in wheels]
+    vulnerable_wheels = [
+        entry["filename"] for entry in wheel_entries if entry["name"] == "diskcache"
+    ]
+    if vulnerable_wheels:
+        raise RuntimeError(
+            "Candidate wheelhouse contains prohibited DiskCache artifacts: "
+            + ", ".join(vulnerable_wheels)
+        )
     python_target = output / "python"
     copy_clean_python_base(base_python, python_target)
     site_packages = python_target / "Lib" / "site-packages"
     site_packages.mkdir(parents=True, exist_ok=True)
+    safe_requirements = pinned_requirement_lines(
+        requirements,
+        exclude={LLAMA_CPP_DISTRIBUTION},
+    )
     run_checked(
         [
             str(source_python),
@@ -215,13 +266,30 @@ def build_runtime(
             str(site_packages),
             "--upgrade",
             "--ignore-installed",
-            "--requirement",
-            str(requirements),
+            *safe_requirements,
+        ],
+        cwd=REPO_ROOT,
+    )
+    run_checked(
+        [
+            str(source_python),
+            "-m",
+            "pip",
+            "install",
+            "--no-deps",
+            "--no-index",
+            "--find-links",
+            str(wheelhouse),
+            "--only-binary=:all:",
+            "--target",
+            str(site_packages),
+            "--upgrade",
+            "--ignore-installed",
+            f"{LLAMA_CPP_DISTRIBUTION}=={plan['top_level_requirements'][LLAMA_CPP_DISTRIBUTION]}",
         ],
         cwd=REPO_ROOT,
     )
 
-    wheel_entries = [inspect_wheel(path) for path in wheels]
     lock = build_lockfile(wheel_entries)
     checks = output / "checks"
     checks.mkdir(parents=True, exist_ok=True)
@@ -312,6 +380,8 @@ def validate_candidate(
     blockers.extend(f"forbidden_distribution:{name}" for name in forbidden)
     if probe.get("llama_cpp_gpu_offload") is not True:
         blockers.append("llama_cpp_gpu_offload_unavailable")
+    if probe.get("persistent_disk_cache_enabled") is not False:
+        blockers.append("llama_cpp_persistent_disk_cache_not_disabled")
     return {
         "schema_version": "1.0",
         "generated_at": now(),
@@ -329,6 +399,8 @@ def validate_candidate(
         "unexpected_distributions": unexpected,
         "forbidden_distributions": forbidden,
         "llama_cpp_gpu_offload": probe.get("llama_cpp_gpu_offload") is True,
+        "persistent_disk_cache_enabled": probe.get("persistent_disk_cache_enabled"),
+        "diskcache_distribution_installed": "diskcache" in installed,
         "blockers": blockers,
         "model_load_attempted": False,
         "inference_executed": False,
@@ -352,7 +424,7 @@ def build_lockfile(wheels: list[dict[str, Any]]) -> dict[str, Any]:
         for entry in wheels
     ]
     return {
-        "version": "18.9.19",
+        "version": "18.9.20",
         "python_version": "3.11",
         "platform": "windows",
         "architecture": "x86_64",
@@ -363,6 +435,11 @@ def build_lockfile(wheels: list[dict[str, Any]]) -> dict[str, Any]:
         "packages": packages,
         "wheels": wheels,
         "hashes": {"algorithm": "sha256", "required": True, "status": "hash_verified"},
+        "security": {
+            "diskcache_distribution_present": False,
+            "llama_cpp_persistent_disk_cache": "disabled",
+            "advisory_removed": "CVE-2025-69872",
+        },
         "not_installed_by_ann": True,
     }
 
@@ -388,6 +465,8 @@ def build_manifest(
         "installed_distributions": validation["installed_distributions"],
         "runtime_size_bytes": directory_size(output),
         "llama_cpp_gpu_offload": validation["llama_cpp_gpu_offload"],
+        "persistent_disk_cache_enabled": False,
+        "diskcache_distribution_installed": False,
         "minimal_runtime": not validation["unexpected_distributions"],
         "source_runtime_modified": False,
         "model_load_attempted": False,
@@ -477,6 +556,7 @@ import sys
 
 from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
 
 names = json.loads(sys.argv[1])
 configure_windows_runtime_dll_paths()
@@ -484,7 +564,7 @@ imports = {}
 llama_module = None
 for name in names:
     try:
-        module = importlib.import_module(name)
+        module = load_secure_llama_cpp() if name == "llama_cpp" else importlib.import_module(name)
         imports[name] = True
         if name == "llama_cpp":
             llama_module = module
@@ -503,6 +583,7 @@ print(json.dumps({
     "llama_cpp_gpu_offload": (
         llama_cpp_supports_gpu_offload(llama_module) is True if llama_module else False
     ),
+    "persistent_disk_cache_enabled": False,
 }, sort_keys=True))
 """
 

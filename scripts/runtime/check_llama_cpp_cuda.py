@@ -17,6 +17,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload  # noqa: E402
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp  # noqa: E402
 from agentic_network.runtime_engine.windows_dlls import (  # noqa: E402
     configure_windows_runtime_dll_paths,
 )
@@ -38,7 +39,7 @@ def main() -> None:
     configured_dll_paths = configure_windows_runtime_dll_paths()
     payload["configured_dll_paths"] = configured_dll_paths
     try:
-        import llama_cpp
+        llama_cpp = load_secure_llama_cpp()
 
         try:
             version = importlib.metadata.version("llama-cpp-python")
@@ -51,6 +52,7 @@ def main() -> None:
                 "llama_cpp_version": version,
                 "llama_class_available": hasattr(llama_cpp, "Llama"),
                 "gpu_offload_metadata": llama_cpp_supports_gpu_offload(llama_cpp),
+                "persistent_disk_cache_enabled": False,
             }
         )
     except Exception as exc:  # pragma: no cover - depends on optional runtime.

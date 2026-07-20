@@ -9,6 +9,7 @@ import urllib.request
 
 from agentic_engineering_network.shared.config import Settings, ensure_inside_root
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
 from agentic_network.models.deepseek_gguf import clean_deepseek_output
 from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths
 
@@ -131,7 +132,7 @@ class LlamaCppProvider(AIProvider):
         if self._llm is None:
             configure_windows_runtime_dll_paths()
             try:
-                import llama_cpp
+                llama_cpp = load_secure_llama_cpp()
             except ImportError as exc:
                 raise RuntimeError(
                     "llama-cpp-python is not installed. Run setup.ps1 or rebuild the API image."

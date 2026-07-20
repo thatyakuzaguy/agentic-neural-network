@@ -23,6 +23,7 @@ from pathlib import Path, PurePosixPath, PureWindowsPath
 from typing import Any
 
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
 from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths
 
 
@@ -51,7 +52,7 @@ def main() -> int:
     _prepare_cuda_library_path()
     _preload_cuda_libraries()
     try:
-        import llama_cpp
+        llama_cpp = load_secure_llama_cpp()
     except Exception as exc:  # pragma: no cover - depends on optional runtime.
         _print({"status": "FAILED", "error": f"llama_cpp_import_failed:{type(exc).__name__}:{exc}"})
         return 3

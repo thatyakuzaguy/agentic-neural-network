@@ -9,6 +9,7 @@ from typing import Any
 from agentic_network.config import PipelineConfig
 from agentic_network.models.base import BaseModelClient
 from agentic_network.models.gpu_policy import require_gguf_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
 from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths
 
 _CODE_BLOCK_PATTERN = re.compile(r"```.*?```", re.DOTALL)
@@ -42,10 +43,10 @@ class DeepSeekGGUFModel(BaseModelClient):
             require_gguf_gpu_offload(config.deepseek_n_gpu_layers, "DeepSeek GGUF")
         configure_windows_runtime_dll_paths()
         try:
-            from llama_cpp import Llama
+            Llama = load_secure_llama_cpp().Llama
         except ImportError as exc:
             raise RuntimeError(
-                "llama-cpp-python is not installed. Install it with: pip install llama-cpp-python"
+                "llama-cpp-python is unavailable in the verified ANN runtime."
             ) from exc
 
         self.config = config

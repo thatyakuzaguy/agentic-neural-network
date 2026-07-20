@@ -275,9 +275,11 @@ def _move_tokenizer_inputs(inputs: object, device: object) -> object:
 
 
 def _load_llama_class() -> object:
+    from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
+
     configure_windows_runtime_dll_paths()
     try:
-        from llama_cpp import Llama
+        Llama = load_secure_llama_cpp().Llama
     except ImportError as exc:
         raise RuntimeError(
             "llama-cpp-python is required for the Qwen3 GGUF backend."

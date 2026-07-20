@@ -15,6 +15,7 @@ def test_release_requirements_are_exact_and_complete() -> None:
     assert requirements["fastapi"] == "0.135.1"
     assert requirements["stripe"] == "15.3.1"
     assert requirements["llama-cpp-python"] == "0.3.32"
+    assert "diskcache" not in requirements
     assert "torch" not in requirements
     assert "transformers" not in requirements
 
@@ -80,3 +81,34 @@ def test_builder_never_uses_shell_true() -> None:
 
     assert "shell=True" not in source
     assert "model.load" not in source.lower()
+
+
+def test_binding_is_excluded_from_normal_dependency_resolution() -> None:
+    requirements = builder.pinned_requirement_lines(
+        builder.DEFAULT_REQUIREMENTS,
+        exclude={builder.LLAMA_CPP_DISTRIBUTION},
+    )
+
+    assert all("llama-cpp-python" not in line for line in requirements)
+    assert any(line.startswith("numpy==") for line in requirements)
+
+
+def test_runtime_lock_forbids_diskcache() -> None:
+    lock = builder.build_lockfile(
+        [
+            {
+                "name": "llama-cpp-python",
+                "version": "0.3.32",
+                "filename": "llama_cpp_python.whl",
+                "sha256": "0" * 64,
+                "size_bytes": 1,
+                "source": "offline_wheelhouse",
+                "role": "ann_release_runtime",
+                "required": True,
+                "status": "hash_verified",
+            }
+        ]
+    )
+
+    assert lock["version"] == "18.9.20"
+    assert lock["security"]["diskcache_distribution_present"] is False

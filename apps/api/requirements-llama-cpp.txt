@@ -1,0 +1,3 @@
+# Installed separately with --no-deps. ANN supplies the safe runtime closure
+# from requirements-models.txt and disables llama.cpp persistent disk caching.
+llama-cpp-python==0.3.32

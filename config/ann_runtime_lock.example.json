@@ -1,5 +1,5 @@
 {
-  "version": "18.9.19",
+  "version": "18.9.20",
   "python_version": "3.11",
   "platform": "windows",
   "architecture": "x86_64",
@@ -83,18 +83,6 @@
     {
       "name": "colorama",
       "version": "0.4.6",
-      "role": "ann_release_runtime",
-      "required_for": [
-        "windows_release"
-      ],
-      "optional": false,
-      "expected_runtime_path": "D:\\ANN\\runtime\\python\\Lib\\site-packages",
-      "verification_status": "hash_verified",
-      "notes": "Resolved by the clean release runtime builder."
-    },
-    {
-      "name": "diskcache",
-      "version": "5.6.3",
       "role": "ann_release_runtime",
       "required_for": [
         "windows_release"
@@ -640,17 +628,6 @@
       "status": "hash_verified"
     },
     {
-      "name": "diskcache",
-      "version": "5.6.3",
-      "filename": "diskcache-5.6.3-py3-none-any.whl",
-      "sha256": "5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19",
-      "size_bytes": 45550,
-      "source": "offline_wheelhouse",
-      "role": "ann_release_runtime",
-      "required": true,
-      "status": "hash_verified"
-    },
-    {
       "name": "fastapi",
       "version": "0.135.1",
       "filename": "fastapi-0.135.1-py3-none-any.whl",
@@ -1073,6 +1050,11 @@
     "algorithm": "sha256",
     "required": true,
     "status": "hash_verified"
+  },
+  "security": {
+    "diskcache_distribution_present": false,
+    "llama_cpp_persistent_disk_cache": "disabled",
+    "advisory_removed": "CVE-2025-69872"
   },
   "not_installed_by_ann": true
 }

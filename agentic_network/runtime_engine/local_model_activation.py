@@ -26,8 +26,9 @@ from pathlib import Path, PurePosixPath
 from time import perf_counter
 from typing import Any
 
-from agentic_network.runtime_engine.backends.llama_cpp_backend import LlamaCppBackend
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
+from agentic_network.runtime_engine.backends.llama_cpp_backend import LlamaCppBackend
 from agentic_network.runtime_engine.loader import get_loaded_models, get_runtime_metrics, reset_runtime_state
 from agentic_network.runtime_engine.model_inventory import load_model_inventory
 from agentic_network.runtime_engine.model_policy import load_model_policy
@@ -468,7 +469,7 @@ def diagnose_llama_cpp_backend(model_path: str | Path | None = None) -> dict[str
         except importlib.metadata.PackageNotFoundError:
             version = None
         try:
-            llama_module = importlib.import_module("llama_cpp")
+            llama_module = load_secure_llama_cpp()
             gpu_attr = llama_cpp_supports_gpu_offload(llama_module)
             if gpu_attr is True:
                 cuda_status = "CUDA_AVAILABLE"
@@ -818,7 +819,7 @@ def diagnose_llama_cpp_real_status(model_path: str | Path | None = None) -> dict
     errors = list(readiness["blocking_reasons"])
     if readiness["binding_importable"]:
         try:
-            llama_module = importlib.import_module("llama_cpp")
+            llama_module = load_secure_llama_cpp()
             llama_class_available = hasattr(llama_module, "Llama")
             metadata = {
                 "LLAMA_SUPPORTS_GPU_OFFLOAD": llama_cpp_supports_gpu_offload(llama_module),
@@ -11680,7 +11681,7 @@ def _external_runtime_type(python_executable: str | Path) -> str:
 
 
 def _load_real_llama_cpp_factory() -> Any:
-    llama_module = importlib.import_module("llama_cpp")
+    llama_module = load_secure_llama_cpp()
     factory = getattr(llama_module, "Llama", None)
     if factory is None:
         raise RuntimeError("llama_cpp.Llama is unavailable")
@@ -12195,7 +12196,9 @@ payload = {{
 write(payload)
 llm = None
 try:
-    from llama_cpp import Llama
+    from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
+
+    Llama = load_secure_llama_cpp().Llama
 
     payload["real_load_attempted"] = True
     payload["status"] = "LOADING"
@@ -12321,7 +12324,9 @@ payload = {{
 write(payload)
 llm = None
 try:
-    from llama_cpp import Llama
+    from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
+
+    Llama = load_secure_llama_cpp().Llama
 
     payload["real_load_attempted"] = True
     payload["status"] = "LOADING"
@@ -12874,7 +12879,10 @@ def _run_embedded_runtime_import_probe(
         "        if name == 'llama_cpp':\n"
         "            from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths\n"
         "            configure_windows_runtime_dll_paths()\n"
-        "        module = importlib.import_module(name)\n"
+        "            from agentic_network.models.llama_cpp_security import load_secure_llama_cpp\n"
+        "            module = load_secure_llama_cpp()\n"
+        "        else:\n"
+        "            module = importlib.import_module(name)\n"
         "        try:\n"
         "            version = importlib.metadata.version({'llama_cpp': 'llama-cpp-python'}.get(name, name))\n"
         "        except Exception:\n"

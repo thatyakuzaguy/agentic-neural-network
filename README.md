@@ -155,11 +155,17 @@ For the offline Windows installation flow, including an embedded runtime,
 packaged Desktop, optional hash-verified local model pack, and post-install
 verification, see [the installer guide](installer/README_INSTALLER.md).
 
-Install the optional Python model backend only in a trusted local environment:
+Install the optional model support dependencies, then install the pinned
+llama.cpp binding without its vulnerable optional disk-cache dependency:
 
 ```powershell
 python -m pip install -e ".[local-models]"
+python -m pip install --no-deps -r apps/api/requirements-llama-cpp.txt
+python scripts/security/verify_llama_cpp_dependency_policy.py
 ```
+
+ANN disables persistent llama.cpp disk caching. Local inference uses no prompt
+cache by default; `LlamaRAMCache` remains available for trusted in-memory use.
 
 ## Development Verification
 

@@ -798,8 +798,9 @@ function isWindowsRuntimeReady(pythonExecutableWindows: string) {
     const probe = [
       "from agentic_network.runtime_engine.windows_dlls import configure_windows_runtime_dll_paths",
       "from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload",
+      "from agentic_network.models.llama_cpp_security import load_secure_llama_cpp",
       "configure_windows_runtime_dll_paths()",
-      "import llama_cpp",
+      "llama_cpp = load_secure_llama_cpp()",
       "raise SystemExit(0 if llama_cpp_supports_gpu_offload(llama_cpp) is True else 4)",
     ].join("; ");
     const result = spawnSync(pythonExecutableWindows, ["-c", probe], {

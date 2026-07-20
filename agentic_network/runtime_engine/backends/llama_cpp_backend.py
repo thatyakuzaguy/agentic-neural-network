@@ -11,6 +11,7 @@ from time import perf_counter
 from typing import Any
 
 from agentic_network.models.gpu_policy import llama_cpp_supports_gpu_offload
+from agentic_network.models.llama_cpp_security import load_secure_llama_cpp
 from agentic_network.runtime_engine.backends.base import (
     BackendGenerateResult,
     BackendHealthResult,
@@ -255,7 +256,7 @@ class LlamaCppBackend:
     def _load_binding(self) -> Any:
         if self._binding is None:
             configure_windows_runtime_dll_paths()
-            self._binding = importlib.import_module("llama_cpp")
+            self._binding = load_secure_llama_cpp()
             self.binding_available = True
         return self._binding
 

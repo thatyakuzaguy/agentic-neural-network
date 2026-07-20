@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-20T02:35:30.7465202Z",
+  "generated_at_utc": "2026-07-20T04:02:54.9786298Z",
   "release_stage": "release-candidate",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
-  "file_count": 799,
-  "total_bytes": 5765589,
+  "file_count": 806,
+  "total_bytes": 5796778,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -69,8 +69,8 @@
     },
     {
       "path": ".github/workflows/security-scan.yml",
-      "bytes": 907,
-      "sha256": "e98e3a8cb9d0f59deed78336c0fa19f620c60b3030c037fa183b5e814f4d965f"
+      "bytes": 1193,
+      "sha256": "851d0117dc97f5e7f8774cf65c9a281e4abde704b0d108b2ef7f22e90bd15bac"
     },
     {
       "path": ".github/workflows/test.yml",
@@ -699,8 +699,8 @@
     },
     {
       "path": "agentic_network/models/deepseek_gguf.py",
-      "bytes": 7107,
-      "sha256": "33abe238201a971ac9f003011178cf75cde3305da49981105e4a7b842456299f"
+      "bytes": 7173,
+      "sha256": "c4a3f05f715e29f750f627669cf511e4376f35c569c9e161cc90abfbfd112056"
     },
     {
       "path": "agentic_network/models/deepseek_unsloth.py",
@@ -713,14 +713,19 @@
       "sha256": "1c8e70e3473684b27463169059678282d12610ff4bc0b9cdc4329ff4d8cf3468"
     },
     {
+      "path": "agentic_network/models/llama_cpp_security.py",
+      "bytes": 4493,
+      "sha256": "56f2bb82ae5868a684af5a0171ead906b388edf4dd4bec6dab60a5c6eca028df"
+    },
+    {
       "path": "agentic_network/models/qwen_unsloth.py",
       "bytes": 3710,
       "sha256": "6c754b59a41d32394c69cabf558efab0038327fdddcd6fd6720f9796c96e6960"
     },
     {
       "path": "agentic_network/models/qwen3.py",
-      "bytes": 13825,
-      "sha256": "360ae23a6a945eb6f4c8d3487bf102a71df9e3d4723dd6c7bdbe18125e1eb749"
+      "bytes": 13916,
+      "sha256": "2ad38f6c7eb5ba6b37364d806a239a5d889df2273c7e45ec195e0ca728c6bb38"
     },
     {
       "path": "agentic_network/parallel_review_agent/__init__.py",
@@ -1089,8 +1094,8 @@
     },
     {
       "path": "agentic_network/runtime_engine/backends/llama_cpp_backend.py",
-      "bytes": 13453,
-      "sha256": "9584020d6132828506687439353d0c5a3a99bf806f940c6f83847edf63cbcd42"
+      "bytes": 13516,
+      "sha256": "c77f01e186b91e947d6a9d5da85cd627110c15c754340782498b42ec135ac38f"
     },
     {
       "path": "agentic_network/runtime_engine/backends/mock_backend.py",
@@ -1124,8 +1129,8 @@
     },
     {
       "path": "agentic_network/runtime_engine/local_model_activation.py",
-      "bytes": 574468,
-      "sha256": "dcd057a32cf96ef2f6fdbe84a3e0de94088a72c47024da0f070fcb6fb253a3be"
+      "bytes": 574874,
+      "sha256": "737f261d7abe26a937bcf0b6afe4cbce0d388385d2628185dc07713ccf604570"
     },
     {
       "path": "agentic_network/runtime_engine/model_inventory.py",
@@ -1223,46 +1228,6 @@
       "sha256": "219e0d01fcb6262576dec0dc57a55a5897eb81fb43f4ace0752e16dd9085328c"
     },
     {
-      "path": "agentic_network/skills_builtin/__init__.py",
-      "bytes": 178,
-      "sha256": "21c7658d33103894861767d917a90d7840ed56cdd2a4ee92ca41fab54d8f1c17"
-    },
-    {
-      "path": "agentic_network/skills_builtin/documentation/manifest.yaml",
-      "bytes": 329,
-      "sha256": "1346f13dd002b810851eec57251aea28775a93d5fbb5a3a22d2f14e8006fb13e"
-    },
-    {
-      "path": "agentic_network/skills_builtin/documentation/runtime.py",
-      "bytes": 8394,
-      "sha256": "e856d7bf1eb8837c164fc25be1782cf0adbe301cab3d3d98198346683d3c0ca4"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/manifest.yaml",
-      "bytes": 353,
-      "sha256": "d38e2d56909ebd2f2b9e2d9b624d62d54466e6eacd606f2b3c059718535803e8"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/patterns.py",
-      "bytes": 9671,
-      "sha256": "62dc8a432dd791559dbb8b79e436cf0e95fbb0877d39b6195794c90a70022cb3"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/runtime.py",
-      "bytes": 25033,
-      "sha256": "186784458c034bd5a6fb0c0caddfa40dd4ebb1b9e0722efeda3d9461ac5c7197"
-    },
-    {
-      "path": "agentic_network/skills_builtin/internet_search/manifest.yaml",
-      "bytes": 342,
-      "sha256": "8aab03c8b75aa30c20ea651a96c79ff86548a5c0e997924b676425427eae919a"
-    },
-    {
-      "path": "agentic_network/skills_builtin/package_registry/manifest.yaml",
-      "bytes": 340,
-      "sha256": "c2935f9e0853a0fddb285bd730dec1dbb65e0d62caffdd73784738c1b2e68bfa"
-    },
-    {
       "path": "agentic_network/skills/__init__.py",
       "bytes": 959,
       "sha256": "eda40d18c7c11e98e35ad05c59c30bcd1902006ac01d3057c290c5d49ef3356b"
@@ -1316,6 +1281,46 @@
       "path": "agentic_network/skills/sandbox.py",
       "bytes": 9095,
       "sha256": "bc33448d43ef8d12ae8e6f29739fe78788d8c609abb6c82942e842ea1cb0b0fc"
+    },
+    {
+      "path": "agentic_network/skills_builtin/__init__.py",
+      "bytes": 178,
+      "sha256": "21c7658d33103894861767d917a90d7840ed56cdd2a4ee92ca41fab54d8f1c17"
+    },
+    {
+      "path": "agentic_network/skills_builtin/documentation/manifest.yaml",
+      "bytes": 329,
+      "sha256": "1346f13dd002b810851eec57251aea28775a93d5fbb5a3a22d2f14e8006fb13e"
+    },
+    {
+      "path": "agentic_network/skills_builtin/documentation/runtime.py",
+      "bytes": 8394,
+      "sha256": "e856d7bf1eb8837c164fc25be1782cf0adbe301cab3d3d98198346683d3c0ca4"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/manifest.yaml",
+      "bytes": 353,
+      "sha256": "d38e2d56909ebd2f2b9e2d9b624d62d54466e6eacd606f2b3c059718535803e8"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/patterns.py",
+      "bytes": 9671,
+      "sha256": "62dc8a432dd791559dbb8b79e436cf0e95fbb0877d39b6195794c90a70022cb3"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/runtime.py",
+      "bytes": 25033,
+      "sha256": "186784458c034bd5a6fb0c0caddfa40dd4ebb1b9e0722efeda3d9461ac5c7197"
+    },
+    {
+      "path": "agentic_network/skills_builtin/internet_search/manifest.yaml",
+      "bytes": 342,
+      "sha256": "8aab03c8b75aa30c20ea651a96c79ff86548a5c0e997924b676425427eae919a"
+    },
+    {
+      "path": "agentic_network/skills_builtin/package_registry/manifest.yaml",
+      "bytes": 340,
+      "sha256": "c2935f9e0853a0fddb285bd730dec1dbb65e0d62caffdd73784738c1b2e68bfa"
     },
     {
       "path": "agentic_network/terminal_agent/__init__.py",
@@ -1483,14 +1488,19 @@
       "sha256": "1869f3d32c0f485e95ceeddc711b962a393d1b3aca00c70a5addd36830aad98e"
     },
     {
-      "path": "apps/api/requirements-models.txt",
-      "bytes": 45,
-      "sha256": "889fe81f86b26c0f366738831586aae0531e282361660edb715024c913a1c5f3"
-    },
-    {
       "path": "apps/api/requirements.txt",
       "bytes": 136,
       "sha256": "beca2ae5a2fadd4ae2addc4ce8f033d1a4aa43ea4e42fac2bcbbc57cbdbab01d"
+    },
+    {
+      "path": "apps/api/requirements-llama-cpp.txt",
+      "bytes": 181,
+      "sha256": "e7298b66f5771ad3db977dd278e2a38b7fbe76377a2c19b744e1e01f433e2ee8"
+    },
+    {
+      "path": "apps/api/requirements-models.txt",
+      "bytes": 74,
+      "sha256": "29f6791b201c1195c64fbe76b59e074b46cfc18c8c2ecdd2df08041c58b5a201"
     },
     {
       "path": "apps/desktop/package.json",
@@ -1503,14 +1513,14 @@
       "sha256": "b5493cd3d3420e971ba47ba9e221174700f233e8aa3c8a952efb77fe9a0d6521"
     },
     {
-      "path": "apps/web/next-env.d.ts",
-      "bytes": 247,
-      "sha256": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651"
-    },
-    {
       "path": "apps/web/next.config.ts",
       "bytes": 332,
       "sha256": "2c10a13d07df56ab9dc9eb1b3f92ebbb89e5e0e0544e68700b088b047895bb44"
+    },
+    {
+      "path": "apps/web/next-env.d.ts",
+      "bytes": 247,
+      "sha256": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651"
     },
     {
       "path": "apps/web/package.json",
@@ -1624,8 +1634,8 @@
     },
     {
       "path": "apps/web/src/lib/ann-terminal.ts",
-      "bytes": 49437,
-      "sha256": "e623d6cdf9ba748108d35859c38d2a322375e573da520ed234f3d9eac42069aa"
+      "bytes": 49541,
+      "sha256": "4d870478a5e5d520f8bd48dba2c912928beda87a4058f3a3195e03094fcbd5de"
     },
     {
       "path": "apps/web/src/lib/api.ts",
@@ -1719,8 +1729,8 @@
     },
     {
       "path": "config/ann_runtime_lock.example.json",
-      "bytes": 35069,
-      "sha256": "da9eb31b0cc66cbfacfb540158c6c34697ec65b2b2bc4a9531e8bc060ae3f276"
+      "bytes": 34489,
+      "sha256": "2ad6cf7073779a080509e22428e89b1f0cf03732e2a50cfc0c950fa16b9df35e"
     },
     {
       "path": "config/ann_runtime_requirements.windows-cp311.txt",
@@ -1823,24 +1833,24 @@
       "sha256": "4ff869820f4486599678a0f0d7314431a9345513618e6851309df63bfc3cbc6e"
     },
     {
-      "path": "docker-compose.yml",
-      "bytes": 3222,
-      "sha256": "2a259e5a64729abe231a96371b5d62b0994b0a5a0b4031e1953aa0b0955d300d"
-    },
-    {
       "path": "docker/api.Dockerfile",
       "bytes": 701,
       "sha256": "4f10c1b413b2bf41f008d127fea37bfac5746a2c117d4729d2fc4a473c17116b"
     },
     {
       "path": "docker/api.gpu.Dockerfile",
-      "bytes": 1619,
-      "sha256": "044c3beffd1b1ac30835126cbe7e94b094b5045aea3d7c33fcdfc9c2487a76d3"
+      "bytes": 1965,
+      "sha256": "de5a07415c55613b1dcf4e4745ba8798dd25f99405777cd35dc86c5bda3dd91e"
     },
     {
       "path": "docker/web.Dockerfile",
       "bytes": 363,
       "sha256": "c906641077122b6dd7f4954bbf1eaa45df29d57eec3e8f4487140767ac220938"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 3222,
+      "sha256": "2a259e5a64729abe231a96371b5d62b0994b0a5a0b4031e1953aa0b0955d300d"
     },
     {
       "path": "docs/adr/0001-clean-architecture-boundaries.md",
@@ -1934,8 +1944,8 @@
     },
     {
       "path": "docs/DEPENDENCY_SECURITY.md",
-      "bytes": 2044,
-      "sha256": "9a963577d1b9f38c65109f54a58518b334c934674c0b1a9c7eb4ba9cdd2a25a6"
+      "bytes": 1964,
+      "sha256": "0ea6d3e7d965ce5f3fd55e912df8da5849bb3540d42f95890c695d3098493d51"
     },
     {
       "path": "docs/DEPLOYMENT.md",
@@ -2068,14 +2078,14 @@
       "sha256": "c8953b558f471b0180030dce4d1f6c88669c6d32c838a80c0de0ddc1839008ea"
     },
     {
-      "path": "package-lock.json",
-      "bytes": 278408,
-      "sha256": "79f39dcb5cda9c729a1eb0c4382226f37f8af3016d609ae1ee16fe212aeacedd"
-    },
-    {
       "path": "package.json",
       "bytes": 545,
       "sha256": "4110ddaa50fc5b93c25c99f54acbfefeecf6fb9ab83663e665059244fa87e6e3"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 278408,
+      "sha256": "79f39dcb5cda9c729a1eb0c4382226f37f8af3016d609ae1ee16fe212aeacedd"
     },
     {
       "path": "packages/agents/agentic_engineering_network/agents/definitions.py",
@@ -2253,14 +2263,14 @@
       "sha256": "3ef5919ffce68c3d7727ca0a33e27013f6eda537af9372bed63e78bb0f8f2710"
     },
     {
-      "path": "packages/security/agentic_engineering_network/security/compliance_evidence.py",
-      "bytes": 1508,
-      "sha256": "7be42a5145030f6ab55a9d129b42417d628eed5541291c44b2921acfa62dd85c"
-    },
-    {
       "path": "packages/security/agentic_engineering_network/security/compliance.py",
       "bytes": 3001,
       "sha256": "50e24d3665738ded7d9452a6d53209242873e1d274c6ed6972cef30b6a3ff8de"
+    },
+    {
+      "path": "packages/security/agentic_engineering_network/security/compliance_evidence.py",
+      "bytes": 1508,
+      "sha256": "7be42a5145030f6ab55a9d129b42417d628eed5541291c44b2921acfa62dd85c"
     },
     {
       "path": "packages/security/agentic_engineering_network/security/review.py",
@@ -2294,8 +2304,8 @@
     },
     {
       "path": "packages/shared/agentic_engineering_network/shared/providers.py",
-      "bytes": 10013,
-      "sha256": "7bbd1300139cde3b4abf05e1f8f5d035dfc116f4a9df79bc0db41945edbad392"
+      "bytes": 10108,
+      "sha256": "bc7616a933ee3e64d507423aff71ad8951ec6b75ae8fed48aebbbc3075419d01"
     },
     {
       "path": "PRODUCTION_READINESS.md",
@@ -2309,18 +2319,18 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 1507,
-      "sha256": "ddd8a059362956fcb48b40b77a10eb04a3cc3bbadc8875a8ad1bad93c746a898"
+      "bytes": 1546,
+      "sha256": "41adce5cd9bd139b946c2c78cc5f2e8ec16c76192ceb4cee0fca99b8894186c9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9028,
+      "sha256": "93f94ac39a05d788461ec06cd84c16ee779f252daa2b63d41d4186d4305362f6"
     },
     {
       "path": "README_LOCAL_MODEL_BACKENDS.md",
       "bytes": 2812,
       "sha256": "36d8e644be3d9d1428ab0152314f0824a9d62752f3b6903a4f1a7e1d8245b660"
-    },
-    {
-      "path": "README.md",
-      "bytes": 8669,
-      "sha256": "dd3edca2a4f8a01963a808e1ee4f9c116b103462ee543ac94e37c8118dd66752"
     },
     {
       "path": "ROADMAP.md",
@@ -2419,8 +2429,8 @@
     },
     {
       "path": "scripts/runtime/build_clean_embedded_runtime.py",
-      "bytes": 19797,
-      "sha256": "7de0cee0f660e1af2ff921adacb17e4e9fdde7b9d4fc6a789a34a494647be554"
+      "bytes": 22849,
+      "sha256": "d802016d095f906d3f441814346e20264719adf01c388adf234053a54e720c93"
     },
     {
       "path": "scripts/runtime/check_ann_runtime_backend.py",
@@ -2429,8 +2439,8 @@
     },
     {
       "path": "scripts/runtime/check_llama_cpp_cuda.py",
-      "bytes": 2113,
-      "sha256": "3571cfc863b21c523db244070bf70c19a160d542690945849d4a9d19e8eea560"
+      "bytes": 2278,
+      "sha256": "784499a6d57db022aabe9031fad230351dc4bdc323fc6efb4a7bae84bac23cf7"
     },
     {
       "path": "scripts/runtime/check_torch_cuda.py",
@@ -2459,8 +2469,8 @@
     },
     {
       "path": "scripts/runtime/run_conversation_llama_cpp.py",
-      "bytes": 9953,
-      "sha256": "c31769670e87f304396659ca5b3cbf912bc583761e086f41c4eb26005fc8d763"
+      "bytes": 10048,
+      "sha256": "910aa5662165948bfa5ae90a356d9d0c2bd695216ed7559e03764c58ef10540e"
     },
     {
       "path": "scripts/runtime/verify_autonomous_capability.py",
@@ -2491,6 +2501,16 @@
       "path": "scripts/runtime/verify_release_operator_environment.py",
       "bytes": 21697,
       "sha256": "ff5aa22fda06e187a8c5430bb9c9f41a613fa6cb4c0d627ad0d261fb10f3dcb5"
+    },
+    {
+      "path": "scripts/security/harden_llama_cpp_runtime.py",
+      "bytes": 10264,
+      "sha256": "7af2ffe8f55f7601e6a6ef14fa08e325a3dc322803de66841ac36f406d1eaadf"
+    },
+    {
+      "path": "scripts/security/verify_llama_cpp_dependency_policy.py",
+      "bytes": 4889,
+      "sha256": "2e71baf8dc456aec0ec168467cdcfec0bd8cc27e874fe85a0b34b01e5c8087f4"
     },
     {
       "path": "scripts/security/verify-postcss-resolution.mjs",
@@ -2689,8 +2709,8 @@
     },
     {
       "path": "tests/python/test_clean_embedded_runtime_builder.py",
-      "bytes": 3054,
-      "sha256": "cf509b07ff66d4b870b17dc66a1049358f1f7f2180a8b7d30502d797f416bc9c"
+      "bytes": 4089,
+      "sha256": "b3d075ba7b9c3d92688a77d7fb0fddacd99bcaed42a52c97cb91f0e8a5d26e64"
     },
     {
       "path": "tests/python/test_clean_machine_emulator.py",
@@ -3048,14 +3068,14 @@
       "sha256": "5e6f5e55fd3d6ec1608daf33406d50f7de20afd3c3fd0f850b5c1ecbfe9be27d"
     },
     {
-      "path": "tests/python/test_first_real_inference_readiness.py",
-      "bytes": 1517,
-      "sha256": "d423dfeae60e3126832f209c17dc42498ae8e4582d9681d0d210a64f9930e553"
-    },
-    {
       "path": "tests/python/test_first_real_inference.py",
       "bytes": 3538,
       "sha256": "6d50f2c4d081e634d08595de1ddddafaa7d6989c9010e460452b8936b64fb753"
+    },
+    {
+      "path": "tests/python/test_first_real_inference_readiness.py",
+      "bytes": 1517,
+      "sha256": "d423dfeae60e3126832f209c17dc42498ae8e4582d9681d0d210a64f9930e553"
     },
     {
       "path": "tests/python/test_first_real_smoke_preparation.py",
@@ -3168,9 +3188,24 @@
       "sha256": "0a81cc08b383f085291db344f6cd6dccfc91bbc13a67a8e6ad80800b416e2541"
     },
     {
+      "path": "tests/python/test_llama_cpp_dependency_policy.py",
+      "bytes": 388,
+      "sha256": "3ae1143dcac35a37f7f6b982207a12a20b38dbdb34d07197f4e1b38cd5af749e"
+    },
+    {
+      "path": "tests/python/test_llama_cpp_diskcache_security.py",
+      "bytes": 2166,
+      "sha256": "5261da4e173d0a624c8ef07cfb65e8573deee51292844394112957508f2218a2"
+    },
+    {
       "path": "tests/python/test_llama_cpp_real_status.py",
       "bytes": 1615,
       "sha256": "1bd651049327abe7af62bc2f61c89a7f5163e21d63624a4d130f07322c46dece"
+    },
+    {
+      "path": "tests/python/test_llama_cpp_runtime_hardening.py",
+      "bytes": 2988,
+      "sha256": "015aefb4fbf504134e8c624dbf9c4fb4a12efb2dd77e66f69bc375c76d10e687"
     },
     {
       "path": "tests/python/test_local_agentic_pipeline.py",
@@ -3234,8 +3269,8 @@
     },
     {
       "path": "tests/python/test_offline_runtime_lockfile.py",
-      "bytes": 1583,
-      "sha256": "f2213c1af914c274bb1762289e8429b9ff0bbce13d4303350a7037307136263a"
+      "bytes": 1832,
+      "sha256": "0a128642d22e47f90ef9d1b0a4e8a5e822113e053b24a496f60b05c65898b751"
     },
     {
       "path": "tests/python/test_offline_wheelhouse_command_plan.py",
@@ -3638,14 +3673,14 @@
       "sha256": "602e608044c80c93e9d9a89a9aea31b096ec9a370f17eb00689d09bd02d53ac1"
     },
     {
-      "path": "tests/python/test_security_agent_runtime.py",
-      "bytes": 7200,
-      "sha256": "44f90c1cae5ed8dc9f19ad1ca81b6d7c955efc57aba68363f3a9df9e1b585890"
-    },
-    {
       "path": "tests/python/test_security.py",
       "bytes": 499,
       "sha256": "79ca7f3da0ebddabc1de6c27982cfb15a74a564a6b540ab9d5964fb7f102dcd5"
+    },
+    {
+      "path": "tests/python/test_security_agent_runtime.py",
+      "bytes": 7200,
+      "sha256": "44f90c1cae5ed8dc9f19ad1ca81b6d7c955efc57aba68363f3a9df9e1b585890"
     },
     {
       "path": "tests/python/test_self_healing_agent_runtime.py",
@@ -3843,14 +3878,14 @@
       "sha256": "48ebcd07ee43a2396f6a3702d265eaaec0a7325b3c6b78f26539c9220473b296"
     },
     {
-      "path": "training/configs/qwen3_product_agent_v9_repaired_v2_bullets.yaml",
-      "bytes": 969,
-      "sha256": "d62f17d4fbb746ca58f9ec819fc77a76e9e4641d85873532735d1d2108b5bb09"
-    },
-    {
       "path": "training/configs/qwen3_product_agent_v9_repaired.yaml",
       "bytes": 947,
       "sha256": "e9293bd1b30290eaef7d613e6b8a2a8e0598500504ee8efb7b45a6d8fcd1cb19"
+    },
+    {
+      "path": "training/configs/qwen3_product_agent_v9_repaired_v2_bullets.yaml",
+      "bytes": 969,
+      "sha256": "d62f17d4fbb746ca58f9ec819fc77a76e9e4641d85873532735d1d2108b5bb09"
     },
     {
       "path": "training/configs/test.yaml",

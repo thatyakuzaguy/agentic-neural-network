@@ -31,7 +31,11 @@ RUN ln -sf ${CUDA_STUBS_PATH}/libcuda.so ${CUDA_STUBS_PATH}/libcuda.so.1
 
 COPY apps/api/requirements.txt /tmp/requirements.txt
 COPY apps/api/requirements-models.txt /tmp/requirements-models.txt
-RUN python3 -m pip install --break-system-packages --no-cache-dir -r /tmp/requirements-models.txt
+COPY apps/api/requirements-llama-cpp.txt /tmp/requirements-llama-cpp.txt
+RUN python3 -m pip install --break-system-packages --no-cache-dir -r /tmp/requirements-models.txt \
+    && python3 -m pip install --break-system-packages --no-cache-dir --no-deps \
+        -r /tmp/requirements-llama-cpp.txt \
+    && python3 -c "import importlib.metadata as m; assert all((d.metadata.get('Name') or '').lower() != 'diskcache' for d in m.distributions())"
 
 COPY . /workspace
 
