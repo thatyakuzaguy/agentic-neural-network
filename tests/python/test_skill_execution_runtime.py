@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import socket
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -31,6 +32,21 @@ def _store(tmp_path: Path) -> SkillPermissionStore:
 
 def _audit(tmp_path: Path) -> SkillAuditLogger:
     return SkillAuditLogger(tmp_path / "outputs" / "skills")
+
+
+def test_builtin_documentation_runtime_imports_before_skills_package() -> None:
+    command = [
+        sys.executable,
+        "-c",
+        (
+            "from agentic_network.skills_builtin.documentation.runtime "
+            "import documentation_lookup; assert callable(documentation_lookup)"
+        ),
+    ]
+
+    completed = subprocess.run(command, check=False, capture_output=True, text=True)
+
+    assert completed.returncode == 0, completed.stderr
 
 
 def test_sandbox_created(tmp_path: Path) -> None:

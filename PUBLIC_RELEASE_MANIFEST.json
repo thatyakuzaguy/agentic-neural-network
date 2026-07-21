@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-21T20:51:12.0650395Z",
+  "generated_at_utc": "2026-07-21T21:09:01.9886167Z",
   "release_stage": "stable",
   "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
   "file_count": 811,
-  "total_bytes": 5940313,
+  "total_bytes": 5940774,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -74,8 +74,8 @@
     },
     {
       "path": ".github/workflows/test.yml",
-      "bytes": 1356,
-      "sha256": "ed8e36155e7f0672f26c2b2abc97d3f348ab28b2247702455c70edfcaa4a0101"
+      "bytes": 1611,
+      "sha256": "feaa343182a9f5ab9c9420e757b201b838469666df2bc13c5b9d7dfeafe9e41c"
     },
     {
       "path": ".gitignore",
@@ -1254,8 +1254,8 @@
     },
     {
       "path": "agentic_network/skills/executor.py",
-      "bytes": 12480,
-      "sha256": "e697cb7963082729d51076de4b8cccb25574f56deb8a9fd7e370706977bceab3"
+      "bytes": 12571,
+      "sha256": "3e4b296bbaec6f7d78b51132c685486ee3eb0100c69b10a74703c347f282a7c1"
     },
     {
       "path": "agentic_network/skills/manager.py",
@@ -2094,8 +2094,8 @@
     },
     {
       "path": "package-lock.json",
-      "bytes": 278388,
-      "sha256": "1bbb9622b9279033903f02698fac419e50d3112158585176885cf2b59bf30e8b"
+      "bytes": 277529,
+      "sha256": "7129cc40e3e33a516ed21a1544937e222d89b1e5b9642ca6588a3f05ef468885"
     },
     {
       "path": "packages/agents/agentic_engineering_network/agents/definitions.py",
@@ -2634,8 +2634,8 @@
     },
     {
       "path": "tests/python/test_ann_v1_release_package_manifest.py",
-      "bytes": 1472,
-      "sha256": "a6e02ccc640f17927456e7df86e48b7ba9dd9ec0dd8576c48561407af275bc47"
+      "bytes": 1976,
+      "sha256": "496ccdde66b10c04230bd314c6b0b17276ae3203cc19b89f988d4374ef1a5a24"
     },
     {
       "path": "tests/python/test_approval_effects.py",
@@ -3734,8 +3734,8 @@
     },
     {
       "path": "tests/python/test_skill_execution_runtime.py",
-      "bytes": 9695,
-      "sha256": "51db0f1c43a07a5eb9000df8cb9220df6000f9c39d3e5d3ee1bfde74fce83651"
+      "bytes": 10165,
+      "sha256": "0a03aba9a1ec944a79760ed5aa9afefcfb1572d4da6a75c819abe677d943ca79"
     },
     {
       "path": "tests/python/test_skill_permissions_runtime.py",

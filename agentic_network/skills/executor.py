@@ -18,8 +18,6 @@ from agentic_network.skills.sandbox import (
     create_skill_workspace,
     evaluate_skill_sandbox,
 )
-from agentic_network.skills_builtin.documentation.runtime import documentation_lookup
-from agentic_network.skills_builtin.github.runtime import github_extract_patterns, github_lookup_file, github_lookup_repo
 
 
 EXECUTABLE_ACTIONS = {"permission_test"}
@@ -172,6 +170,12 @@ class SkillExecutor:
             self.audit_logger.log_skill_execution(result.to_dict(), sandbox.to_dict())
             return result
         try:
+            from agentic_network.skills_builtin.github.runtime import (
+                github_extract_patterns,
+                github_lookup_file,
+                github_lookup_repo,
+            )
+
             if action == "lookup_repo":
                 lookup = github_lookup_repo(payload, workspace, workspace.parent)
             elif action == "lookup_file":
@@ -268,6 +272,8 @@ class SkillExecutor:
             self.audit_logger.log_skill_execution(result.to_dict(), sandbox.to_dict())
             return result
         try:
+            from agentic_network.skills_builtin.documentation.runtime import documentation_lookup
+
             lookup = documentation_lookup(payload, workspace, workspace.parent)
         except (OSError, ValueError) as exc:
             result = _result(

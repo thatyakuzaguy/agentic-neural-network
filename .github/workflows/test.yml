@@ -34,10 +34,17 @@ jobs:
         run: python scripts/release/verify_markdown_links.py
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -e ".[dev]"
-      - run: python -m pytest tests/python -q
+      - name: Run Python tests on ANN-safe drive
+        shell: pwsh
+        env:
+          TEMP: D:\ANN-CI-Tmp
+          TMP: D:\ANN-CI-Tmp
+        run: |
+          New-Item -ItemType Directory -Path 'D:\ANN-CI-Tmp' -Force | Out-Null
+          python -m pytest tests/python -q --basetemp 'D:\ANN-CI-Tmp\pytest'
       - run: npm ci
       - name: Validate patched production dependency tree
         run: node scripts/security/verify-postcss-resolution.mjs
-      - run: npm audit --omit=dev --audit-level=moderate
+      - run: npm audit --audit-level=moderate
       - run: npm --workspace apps/web run test
       - run: npm --workspace apps/web run build

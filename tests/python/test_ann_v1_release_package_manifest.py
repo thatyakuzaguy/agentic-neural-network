@@ -36,3 +36,16 @@ def test_python_distribution_uses_explicit_monorepo_package_discovery() -> None:
         "*.css",
         "*.js",
     }
+
+
+def test_github_tests_use_ann_safe_drive_for_temporary_projects() -> None:
+    project_root = Path(__file__).resolve().parents[2]
+    workflow = (project_root / ".github" / "workflows" / "test.yml").read_text(
+        encoding="utf-8"
+    )
+
+    assert "TEMP: D:\\ANN-CI-Tmp" in workflow
+    assert "TMP: D:\\ANN-CI-Tmp" in workflow
+    assert "--basetemp 'D:\\ANN-CI-Tmp\\pytest'" in workflow
+    assert "npm audit --audit-level=moderate" in workflow
+    assert "npm audit --omit=dev" not in workflow
