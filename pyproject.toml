@@ -36,6 +36,12 @@ dev = [
   "mypy>=1.11.0",
 ]
 
+[tool.setuptools.packages.find]
+include = ["agentic_network*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.yaml", "*.html", "*.css", "*.js"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests/python"]
 pythonpath = [
