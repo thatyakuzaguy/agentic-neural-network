@@ -66,11 +66,11 @@ manifest.
 ## Dependency Audit
 
 The release gate fails on moderate, high, or critical production dependency
-findings. Next.js 16.2.10 still declares the vulnerable PostCSS 8.4.31 release,
-so ANN applies a root override to PostCSS 8.5.20 and verifies that no nested
-copy remains. `npm audit --omit=dev --audit-level=moderate` reports zero
-findings. The override is temporary and must be removed when a stable Next.js
-release includes a patched PostCSS version.
+findings. Next.js still declares vulnerable PostCSS 8.4.31 and Sharp 0.34.x
+releases, so ANN applies root overrides to PostCSS 8.5.20 and Sharp 0.35.3 and
+verifies that no vulnerable nested copy remains. Both the production-only and
+complete npm audits must report zero findings. These overrides are temporary
+and must be removed when a stable Next.js release declares patched versions.
 
 ## Stable Source Release Status
 

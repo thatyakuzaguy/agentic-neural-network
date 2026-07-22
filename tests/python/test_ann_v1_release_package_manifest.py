@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import tomllib
 from pathlib import Path
 
@@ -64,3 +65,24 @@ def test_windows_service_scripts_are_root_portable() -> None:
     assert "Launch desktop\\ANN.exe instead." in start
     assert "docker compose -f $composeFile up" in start
     assert "docker compose -f $composeFile down" in stop
+
+
+def test_javascript_security_overrides_pin_patched_transitive_dependencies() -> None:
+    project_root = Path(__file__).resolve().parents[2]
+    package = json.loads((project_root / "package.json").read_text(encoding="utf-8"))
+    package_lock = json.loads(
+        (project_root / "package-lock.json").read_text(encoding="utf-8")
+    )
+    web_package = json.loads(
+        (project_root / "apps" / "web" / "package.json").read_text(encoding="utf-8")
+    )
+
+    assert web_package["dependencies"]["sharp"] == "0.35.3"
+    assert package["overrides"]["postcss"] == "8.5.20"
+    assert package["overrides"]["sharp"] == "0.35.3"
+    assert package["overrides"]["next"]["postcss"] == "8.5.20"
+    assert package["overrides"]["next"]["sharp"] == "0.35.3"
+    assert package_lock["packages"]["node_modules/postcss"]["version"] == "8.5.20"
+    assert package_lock["packages"]["node_modules/sharp"]["version"] == "0.35.3"
+    assert "node_modules/next/node_modules/postcss" not in package_lock["packages"]
+    assert "node_modules/next/node_modules/sharp" not in package_lock["packages"]
