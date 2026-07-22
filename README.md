@@ -8,13 +8,13 @@ consensus, controlled patch application, verification, and release artifacts.
 It runs on the user's machine, exposes its decisions, and keeps humans in
 control of consequential actions.
 
-> **Status: v0.1.4 release candidate.** The source distribution, embedded
-> runtime, GPU model lifecycle, isolated installer, and fresh-clone test matrix
-> have been validated. The trusted Windows installer channel is not final yet:
-> it still requires a real Authenticode certificate and transferred evidence
-> from a separate clean Windows 11 machine. ANN does not guarantee that one
-> prompt will produce commercially successful software; generated code still
-> requires qualified review.
+> **Status: v0.1.4 stable source and unsigned offline release.** The source
+> distribution, embedded runtime, GPU model lifecycle, isolated installer, and
+> fresh-clone test matrix have been validated. The trusted-publisher Windows
+> channel still requires a real Authenticode certificate and transferred
+> evidence from a separate clean Windows 11 machine. ANN does not guarantee
+> that one prompt will produce commercially successful software; generated
+> code still requires qualified review.
 
 ![ANN dashboard](docs/assets/ann-dashboard.png)
 
@@ -131,6 +131,18 @@ excluded from the public repository.
 
 WSL2 is supported for an external CUDA-enabled Python runtime. A configured
 Windows runtime may also be used. Cloud APIs are optional, not required.
+
+### Development and validation hardware
+
+ANN `v0.1.4` was primarily developed and validated on this local workstation:
+
+- AMD Ryzen 5 2600 processor;
+- NVIDIA GeForce RTX 3060 Ti with 8 GB of VRAM;
+- 32 GB of DDR4 system memory.
+
+This is a reference configuration, not a formal minimum or recommended system
+requirement. Performance and model capacity depend on quantization, context
+size, enabled services, and the models supplied by the operator.
 
 ## Quick Start From Source
 

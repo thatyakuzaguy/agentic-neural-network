@@ -91,6 +91,13 @@ Model weights are not Git-tracked or bundled. Users provide models separately,
 and the optional model-pack manifest records hashes without granting
 redistribution rights.
 
+## Development And Validation Hardware
+
+ANN `v0.1.4` was primarily developed and validated on an AMD Ryzen 5 2600,
+an NVIDIA GeForce RTX 3060 Ti with 8 GB of VRAM, and 32 GB of DDR4 system
+memory. This is evidence of the tested workstation, not a formal minimum or
+recommended hardware requirement.
+
 The source and unsigned portable channels are stable, but ANN must not label
 the Windows installer as a trusted-publisher release until both external gates
 have real, matching evidence:
