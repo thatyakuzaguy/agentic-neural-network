@@ -341,7 +341,7 @@ if ($RequireModels) {
 Update-InstalledModelConfiguration $InstallRoot ([bool]$RequireModels)
 
 foreach ($name in @(
-  "ann_launcher.ps1", "create_shortcut.ps1", "uninstall_ann.ps1", "verify_install.ps1",
+  "ann_launcher.ps1", "create_shortcut.ps1", "ANN_Uninstall.exe", "uninstall_ann.ps1", "verify_install.ps1",
   "validate_clean_machine.ps1", "README_INSTALLER.md", "README_OFFLINE_RELEASE.md"
 )) {
   Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination (Join-Path $InstallRoot "installer\$name") -Force

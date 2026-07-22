@@ -74,8 +74,8 @@ and must be removed when a stable Next.js release declares patched versions.
 
 ## Stable Source Release Status
 
-ANN `v0.1.4` is the stable source and unsigned portable release. The release
-gate passed the hermetic development suite (1,621 passed, one skipped), Ruff,
+ANN `v0.1.5` is the stable source and unsigned portable release. The release
+gate passed the public CI suite (1,574 passed, 54 intentionally skipped), Ruff,
 frontend tests and TypeScript, Next.js production build, Playwright, Electron
 packaging, clean Docker image builds, and a live PostgreSQL/API/web Compose
 smoke. The release bundle is split into GitHub-compatible parts and protected
@@ -93,7 +93,7 @@ redistribution rights.
 
 ## Development And Validation Hardware
 
-ANN `v0.1.4` was primarily developed and validated on an AMD Ryzen 5 2600,
+ANN `v0.1.5` was primarily developed and validated on an AMD Ryzen 5 2600,
 an NVIDIA GeForce RTX 3060 Ti with 8 GB of VRAM, and 32 GB of DDR4 system
 memory. This is evidence of the tested workstation, not a formal minimum or
 recommended hardware requirement.

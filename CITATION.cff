@@ -4,8 +4,8 @@ title: "ANN: Agentic Neural Network"
 type: software
 authors:
   - name: "ANN Project Contributors"
-version: 0.1.4-rc.2
-date-released: 2026-07-18
+version: 0.1.5
+date-released: 2026-07-22
 license: MIT
 repository-code: "https://github.com/ThatYakuzaGuy/ANN"
 keywords:

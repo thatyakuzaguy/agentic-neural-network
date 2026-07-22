@@ -8,7 +8,7 @@ consensus, controlled patch application, verification, and release artifacts.
 It runs on the user's machine, exposes its decisions, and keeps humans in
 control of consequential actions.
 
-> **Status: v0.1.4 stable source and unsigned offline release.** The source
+> **Status: v0.1.5 stable source and unsigned offline release.** The source
 > distribution, embedded runtime, GPU model lifecycle, isolated installer, and
 > fresh-clone test matrix have been validated. The trusted-publisher Windows
 > channel still requires a real Authenticode certificate and transferred
@@ -134,7 +134,7 @@ Windows runtime may also be used. Cloud APIs are optional, not required.
 
 ### Development and validation hardware
 
-ANN `v0.1.4` was primarily developed and validated on this local workstation:
+ANN `v0.1.5` was primarily developed and validated on this local workstation:
 
 - AMD Ryzen 5 2600 processor;
 - NVIDIA GeForce RTX 3060 Ti with 8 GB of VRAM;

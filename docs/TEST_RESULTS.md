@@ -1,6 +1,41 @@
 # Test Results
 
-Date: 2026-07-21
+Date: 2026-07-22
+
+## Stable 0.1.5 Validation
+
+```text
+GitHub Actions / Test
+1574 passed, 54 skipped, 1 warning in 139.92s
+
+npm audit --audit-level=moderate
+found 0 vulnerabilities
+
+npm --workspace apps/web run test
+5 test files passed, 22 tests passed
+
+npm --workspace apps/web run build
+Next.js 16.2.10 production build passed
+```
+
+All five public workflows passed on the audited source commit: Test, Lint,
+Security Scan, Docker Build, and CodeQL. The skips are the explicit public
+allowlist for private release evidence and local model/runtime artifacts.
+
+```text
+Validated 0.1.5 offline bundle
+16,892 files
+4,379,225,421 bytes
+SHA-256 3695494cf34c14593b0f51dc742327dbd336b1c2abdf95b98ed62711cbb54e68
+
+Bundled install/runtime validation: VALID
+Installed Sharp: 0.35.3
+Desktop/API/web smoke: PASSED
+Native uninstaller: exit 0, zero residual files
+
+Python wheel SHA-256
+ef5e00851fbca6a456aab09896bd8933d323732aad77b0959c3864e677fa108d
+```
 
 ## Stable 0.1.4 Validation
 

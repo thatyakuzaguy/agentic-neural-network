@@ -1,7 +1,7 @@
 {
   "name": "@aen/desktop",
   "private": true,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Desktop shell for ANN (Agentic Neural Network)",
   "main": "src/main.js",
   "author": "ANN contributors",

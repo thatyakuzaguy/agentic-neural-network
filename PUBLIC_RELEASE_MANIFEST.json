@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-07-21T21:28:40.3613969Z",
+  "generated_at_utc": "2026-07-22T18:52:37.7560621Z",
   "release_stage": "stable",
-  "source_revision": "cbb9c3b9adc5a16c7f487702a8870877c11a3a79",
+  "source_revision": "41b96f63c4864ae598c63b6557b137bfe74ca0d3",
   "file_count": 811,
-  "total_bytes": 5940891,
+  "total_bytes": 5965383,
   "maximum_file_size_mb": 25,
   "files": [
     {
@@ -1238,6 +1238,46 @@
       "sha256": "219e0d01fcb6262576dec0dc57a55a5897eb81fb43f4ace0752e16dd9085328c"
     },
     {
+      "path": "agentic_network/skills_builtin/__init__.py",
+      "bytes": 178,
+      "sha256": "21c7658d33103894861767d917a90d7840ed56cdd2a4ee92ca41fab54d8f1c17"
+    },
+    {
+      "path": "agentic_network/skills_builtin/documentation/manifest.yaml",
+      "bytes": 329,
+      "sha256": "1346f13dd002b810851eec57251aea28775a93d5fbb5a3a22d2f14e8006fb13e"
+    },
+    {
+      "path": "agentic_network/skills_builtin/documentation/runtime.py",
+      "bytes": 8394,
+      "sha256": "e856d7bf1eb8837c164fc25be1782cf0adbe301cab3d3d98198346683d3c0ca4"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/manifest.yaml",
+      "bytes": 353,
+      "sha256": "d38e2d56909ebd2f2b9e2d9b624d62d54466e6eacd606f2b3c059718535803e8"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/patterns.py",
+      "bytes": 9671,
+      "sha256": "62dc8a432dd791559dbb8b79e436cf0e95fbb0877d39b6195794c90a70022cb3"
+    },
+    {
+      "path": "agentic_network/skills_builtin/github/runtime.py",
+      "bytes": 25033,
+      "sha256": "186784458c034bd5a6fb0c0caddfa40dd4ebb1b9e0722efeda3d9461ac5c7197"
+    },
+    {
+      "path": "agentic_network/skills_builtin/internet_search/manifest.yaml",
+      "bytes": 342,
+      "sha256": "8aab03c8b75aa30c20ea651a96c79ff86548a5c0e997924b676425427eae919a"
+    },
+    {
+      "path": "agentic_network/skills_builtin/package_registry/manifest.yaml",
+      "bytes": 340,
+      "sha256": "c2935f9e0853a0fddb285bd730dec1dbb65e0d62caffdd73784738c1b2e68bfa"
+    },
+    {
       "path": "agentic_network/skills/__init__.py",
       "bytes": 959,
       "sha256": "eda40d18c7c11e98e35ad05c59c30bcd1902006ac01d3057c290c5d49ef3356b"
@@ -1291,46 +1331,6 @@
       "path": "agentic_network/skills/sandbox.py",
       "bytes": 9095,
       "sha256": "bc33448d43ef8d12ae8e6f29739fe78788d8c609abb6c82942e842ea1cb0b0fc"
-    },
-    {
-      "path": "agentic_network/skills_builtin/__init__.py",
-      "bytes": 178,
-      "sha256": "21c7658d33103894861767d917a90d7840ed56cdd2a4ee92ca41fab54d8f1c17"
-    },
-    {
-      "path": "agentic_network/skills_builtin/documentation/manifest.yaml",
-      "bytes": 329,
-      "sha256": "1346f13dd002b810851eec57251aea28775a93d5fbb5a3a22d2f14e8006fb13e"
-    },
-    {
-      "path": "agentic_network/skills_builtin/documentation/runtime.py",
-      "bytes": 8394,
-      "sha256": "e856d7bf1eb8837c164fc25be1782cf0adbe301cab3d3d98198346683d3c0ca4"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/manifest.yaml",
-      "bytes": 353,
-      "sha256": "d38e2d56909ebd2f2b9e2d9b624d62d54466e6eacd606f2b3c059718535803e8"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/patterns.py",
-      "bytes": 9671,
-      "sha256": "62dc8a432dd791559dbb8b79e436cf0e95fbb0877d39b6195794c90a70022cb3"
-    },
-    {
-      "path": "agentic_network/skills_builtin/github/runtime.py",
-      "bytes": 25033,
-      "sha256": "186784458c034bd5a6fb0c0caddfa40dd4ebb1b9e0722efeda3d9461ac5c7197"
-    },
-    {
-      "path": "agentic_network/skills_builtin/internet_search/manifest.yaml",
-      "bytes": 342,
-      "sha256": "8aab03c8b75aa30c20ea651a96c79ff86548a5c0e997924b676425427eae919a"
-    },
-    {
-      "path": "agentic_network/skills_builtin/package_registry/manifest.yaml",
-      "bytes": 340,
-      "sha256": "c2935f9e0853a0fddb285bd730dec1dbb65e0d62caffdd73784738c1b2e68bfa"
     },
     {
       "path": "agentic_network/terminal_agent/__init__.py",
@@ -1498,11 +1498,6 @@
       "sha256": "090bfbac46fa7619374b889bbd34bc981d36db21420351f87ee1c173c1ae7699"
     },
     {
-      "path": "apps/api/requirements.txt",
-      "bytes": 136,
-      "sha256": "beca2ae5a2fadd4ae2addc4ce8f033d1a4aa43ea4e42fac2bcbbc57cbdbab01d"
-    },
-    {
       "path": "apps/api/requirements-llama-cpp.txt",
       "bytes": 181,
       "sha256": "e7298b66f5771ad3db977dd278e2a38b7fbe76377a2c19b744e1e01f433e2ee8"
@@ -1513,9 +1508,14 @@
       "sha256": "29f6791b201c1195c64fbe76b59e074b46cfc18c8c2ecdd2df08041c58b5a201"
     },
     {
+      "path": "apps/api/requirements.txt",
+      "bytes": 136,
+      "sha256": "beca2ae5a2fadd4ae2addc4ce8f033d1a4aa43ea4e42fac2bcbbc57cbdbab01d"
+    },
+    {
       "path": "apps/desktop/package.json",
       "bytes": 1034,
-      "sha256": "59f8cb5c2c8e7e9f4a0368c8b84207c6f1ffcf3bd4fe029bfe8abea2f5d52920"
+      "sha256": "dcdb722fd367ec40b0b7465dbde2a44e21cb04f962b498c6d3dda451fc7f8755"
     },
     {
       "path": "apps/desktop/src/main.js",
@@ -1523,19 +1523,19 @@
       "sha256": "d99fda2e4da205e29df7876257135977e18b54dc371bb0d6cde0ca7f76465e86"
     },
     {
-      "path": "apps/web/next.config.ts",
-      "bytes": 368,
-      "sha256": "f83a93ed5f83d775f713d3a60582e3735b9603b4451b3fb17eb18cbbf512767a"
-    },
-    {
       "path": "apps/web/next-env.d.ts",
       "bytes": 251,
       "sha256": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc"
     },
     {
+      "path": "apps/web/next.config.ts",
+      "bytes": 368,
+      "sha256": "f83a93ed5f83d775f713d3a60582e3735b9603b4451b3fb17eb18cbbf512767a"
+    },
+    {
       "path": "apps/web/package.json",
-      "bytes": 956,
-      "sha256": "b6441967da596733c5ecba712045a2396fcf66b6313654593be891b96aeeb910"
+      "bytes": 979,
+      "sha256": "221a6d40363b1575e72efe9fecf8af55dbb0163e86f63675b55edb44149933cc"
     },
     {
       "path": "apps/web/playwright.config.ts",
@@ -1689,8 +1689,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 10099,
-      "sha256": "18602e1731a3e665305b943c09bc8e87d52c63444122bc653d35504e1aee1dad"
+      "bytes": 10760,
+      "sha256": "028c95f4c11e5a38bba7a7ef9020c4d0503a6e273025d4aa0d4f688739338a1a"
     },
     {
       "path": "CICD_SETUP.md",
@@ -1699,8 +1699,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 421,
-      "sha256": "45087f8c95bc66536fd7912daa0ae3236e9360215560b8cfa454ece2496980d8"
+      "bytes": 416,
+      "sha256": "7edf65815d981a3aee8729c360ae9791d618e2eb5af44a2128752ef1d5cc9d9d"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -1843,6 +1843,11 @@
       "sha256": "4ff869820f4486599678a0f0d7314431a9345513618e6851309df63bfc3cbc6e"
     },
     {
+      "path": "docker-compose.yml",
+      "bytes": 3228,
+      "sha256": "878ccee1e3e5ff87d5ca9934699eff102f45ae65d914d6a7efb9caee2941af05"
+    },
+    {
       "path": "docker/api.Dockerfile",
       "bytes": 1203,
       "sha256": "7e85e8f8a340af73aedc9e69f05fa5d731310741f0ff6ddf8df708ed03f1567f"
@@ -1856,11 +1861,6 @@
       "path": "docker/web.Dockerfile",
       "bytes": 828,
       "sha256": "a4709b57ccab7f8ed1e6ff7ddb1fef0b09ca1ab384e0cbb07b9d392f08052246"
-    },
-    {
-      "path": "docker-compose.yml",
-      "bytes": 3228,
-      "sha256": "878ccee1e3e5ff87d5ca9934699eff102f45ae65d914d6a7efb9caee2941af05"
     },
     {
       "path": "docs/adr/0001-clean-architecture-boundaries.md",
@@ -1979,8 +1979,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "bytes": 4907,
-      "sha256": "0ed8fc75afbef153fa5c312d7ffce356af78966dce8f53bc773c61415faf0014"
+      "bytes": 5372,
+      "sha256": "14fca5c3613c4842dae646b22196bfa9de2608e8bc6d419031bf5a068e2f6d78"
     },
     {
       "path": "docs/SECURITY_REVIEW.md",
@@ -1994,8 +1994,8 @@
     },
     {
       "path": "docs/TEST_RESULTS.md",
-      "bytes": 6956,
-      "sha256": "5449d01d55fce90fbd6a6eabc45487f36e570ac0bdc59125dbba209da5014358"
+      "bytes": 8153,
+      "sha256": "3fcd3ae47314ff647d2c4379bef98e85b8af4af5e3891d01f759c2ac7a6393cb"
     },
     {
       "path": "installer/ann_launcher.ps1",
@@ -2014,8 +2014,8 @@
     },
     {
       "path": "installer/AnnPowerShellLauncher.cs",
-      "bytes": 2339,
-      "sha256": "39d3b611d7c88ea1dea5bfe435eff204a25743aa4aeb27e954429ffe660dc863"
+      "bytes": 2443,
+      "sha256": "19cd241b17ff79eb254773e281fbc5267520e572b69cf7abd1e97405c87d5edf"
     },
     {
       "path": "installer/AnnSetupLauncher.cs",
@@ -2039,8 +2039,8 @@
     },
     {
       "path": "installer/install_ann.ps1",
-      "bytes": 17774,
-      "sha256": "b0c59cb84fe773e3f2dc5298af6782445e4bf4fe8bc28fb9d16fb87decb9841c"
+      "bytes": 17795,
+      "sha256": "e62cc0c01d38c0ec9207b9820ee7f271039a8c46d11a95d7ea890a8cddd037d7"
     },
     {
       "path": "installer/README_INSTALLER.md",
@@ -2059,8 +2059,8 @@
     },
     {
       "path": "installer/uninstall_ann.ps1",
-      "bytes": 1399,
-      "sha256": "656d03c02d129a822ee2c9fc74d0d827b6d1b9d68e6c6498e12078ac9c8d3de5"
+      "bytes": 2435,
+      "sha256": "70a22b221afff0763bfc11493f532bcb0b205e7a1fb122a29e8d078d0d551450"
     },
     {
       "path": "installer/validate_clean_machine.ps1",
@@ -2088,14 +2088,14 @@
       "sha256": "c8953b558f471b0180030dce4d1f6c88669c6d32c838a80c0de0ddc1839008ea"
     },
     {
-      "path": "package.json",
-      "bytes": 540,
-      "sha256": "ae91823e498abfa342aaa57bd7974fba36b8e10aeb32a96d9982ce1f96fbaf0a"
+      "path": "package-lock.json",
+      "bytes": 294966,
+      "sha256": "1fd49bc97bb0ecd3aef0095768a4b5c80400fa7a5b3bf5b8a4ddf15257679707"
     },
     {
-      "path": "package-lock.json",
-      "bytes": 277529,
-      "sha256": "7129cc40e3e33a516ed21a1544937e222d89b1e5b9642ca6588a3f05ef468885"
+      "path": "package.json",
+      "bytes": 635,
+      "sha256": "7140918c41b3182bac712e7820265b185516184de4400e2d2bede8952942b6c2"
     },
     {
       "path": "packages/agents/agentic_engineering_network/agents/definitions.py",
@@ -2278,14 +2278,14 @@
       "sha256": "3ef5919ffce68c3d7727ca0a33e27013f6eda537af9372bed63e78bb0f8f2710"
     },
     {
-      "path": "packages/security/agentic_engineering_network/security/compliance.py",
-      "bytes": 3001,
-      "sha256": "50e24d3665738ded7d9452a6d53209242873e1d274c6ed6972cef30b6a3ff8de"
-    },
-    {
       "path": "packages/security/agentic_engineering_network/security/compliance_evidence.py",
       "bytes": 1508,
       "sha256": "7be42a5145030f6ab55a9d129b42417d628eed5541291c44b2921acfa62dd85c"
+    },
+    {
+      "path": "packages/security/agentic_engineering_network/security/compliance.py",
+      "bytes": 3001,
+      "sha256": "50e24d3665738ded7d9452a6d53209242873e1d274c6ed6972cef30b6a3ff8de"
     },
     {
       "path": "packages/security/agentic_engineering_network/security/review.py",
@@ -2335,17 +2335,17 @@
     {
       "path": "pyproject.toml",
       "bytes": 1373,
-      "sha256": "e6263e0b236b4f46f5e7cd9e6a5dd83e8e5ad43d7ce93fde9c46dc471101acfd"
-    },
-    {
-      "path": "README.md",
-      "bytes": 9028,
-      "sha256": "93f94ac39a05d788461ec06cd84c16ee779f252daa2b63d41d4186d4305362f6"
+      "sha256": "23bdb82e8606a6e56b8658329201d0ee0f54e88b79e7648c887b18c3eaeff1df"
     },
     {
       "path": "README_LOCAL_MODEL_BACKENDS.md",
       "bytes": 2812,
       "sha256": "36d8e644be3d9d1428ab0152314f0824a9d62752f3b6903a4f1a7e1d8245b660"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9482,
+      "sha256": "b9626425fbbd5848c1bf105f47b956a6a81c98fcdcef46b307473ac6706b403f"
     },
     {
       "path": "ROADMAP.md",
@@ -2564,13 +2564,13 @@
     },
     {
       "path": "start.ps1",
-      "bytes": 633,
-      "sha256": "50aed5e5604f4a9fc24451ee3e08ba3206782a7eb62360374a1a297c77dea813"
+      "bytes": 1001,
+      "sha256": "704bd7e0806f014aa9016a613ec0ba106631d4fc3ee35c8d510237f104ab6c5f"
     },
     {
       "path": "stop.ps1",
-      "bytes": 333,
-      "sha256": "ab79bca63fff16600428b1fd7cd8bea23b5d02663e92d48c0266a67246daa16f"
+      "bytes": 490,
+      "sha256": "9a4ccfb2aa379986eb4ad82d2fe6c1c8f9d412972e3c19b5eef3b8730da6c68b"
     },
     {
       "path": "STRIPE_SETUP.md",
@@ -2634,8 +2634,8 @@
     },
     {
       "path": "tests/python/test_ann_v1_release_package_manifest.py",
-      "bytes": 2065,
-      "sha256": "afa1d8db9c033a3f28361dc3e1b1ade2f9ec4b230fd5438f9d7e802e3acfa012"
+      "bytes": 3769,
+      "sha256": "3df948291f151c62081f3daa815085838cecd8f506a2006488ad63e2c484f40c"
     },
     {
       "path": "tests/python/test_approval_effects.py",
@@ -3083,14 +3083,14 @@
       "sha256": "5e6f5e55fd3d6ec1608daf33406d50f7de20afd3c3fd0f850b5c1ecbfe9be27d"
     },
     {
-      "path": "tests/python/test_first_real_inference.py",
-      "bytes": 3538,
-      "sha256": "6d50f2c4d081e634d08595de1ddddafaa7d6989c9010e460452b8936b64fb753"
-    },
-    {
       "path": "tests/python/test_first_real_inference_readiness.py",
       "bytes": 1642,
       "sha256": "0ce03dc9b0664fa63a1e05169653a9d10d6df18528ffcb205642388f4c3f7572"
+    },
+    {
+      "path": "tests/python/test_first_real_inference.py",
+      "bytes": 3538,
+      "sha256": "6d50f2c4d081e634d08595de1ddddafaa7d6989c9010e460452b8936b64fb753"
     },
     {
       "path": "tests/python/test_first_real_smoke_preparation.py",
@@ -3174,8 +3174,8 @@
     },
     {
       "path": "tests/python/test_installer_uninstall_contract.py",
-      "bytes": 796,
-      "sha256": "b84abee7c8bbe67332dacfce1aa0d5c993ea73eb950efda7c50d5c67ac4bc89c"
+      "bytes": 1571,
+      "sha256": "c433399c27116901149b9e7f1be9289c06f6f129d7fa9a5450f32a8fa2f04b1d"
     },
     {
       "path": "tests/python/test_intelligence_engines.py",
@@ -3698,14 +3698,14 @@
       "sha256": "602e608044c80c93e9d9a89a9aea31b096ec9a370f17eb00689d09bd02d53ac1"
     },
     {
-      "path": "tests/python/test_security.py",
-      "bytes": 499,
-      "sha256": "79ca7f3da0ebddabc1de6c27982cfb15a74a564a6b540ab9d5964fb7f102dcd5"
-    },
-    {
       "path": "tests/python/test_security_agent_runtime.py",
       "bytes": 7200,
       "sha256": "44f90c1cae5ed8dc9f19ad1ca81b6d7c955efc57aba68363f3a9df9e1b585890"
+    },
+    {
+      "path": "tests/python/test_security.py",
+      "bytes": 499,
+      "sha256": "79ca7f3da0ebddabc1de6c27982cfb15a74a564a6b540ab9d5964fb7f102dcd5"
     },
     {
       "path": "tests/python/test_self_healing_agent_runtime.py",
@@ -3903,14 +3903,14 @@
       "sha256": "48ebcd07ee43a2396f6a3702d265eaaec0a7325b3c6b78f26539c9220473b296"
     },
     {
-      "path": "training/configs/qwen3_product_agent_v9_repaired.yaml",
-      "bytes": 947,
-      "sha256": "e9293bd1b30290eaef7d613e6b8a2a8e0598500504ee8efb7b45a6d8fcd1cb19"
-    },
-    {
       "path": "training/configs/qwen3_product_agent_v9_repaired_v2_bullets.yaml",
       "bytes": 969,
       "sha256": "d62f17d4fbb746ca58f9ec819fc77a76e9e4641d85873532735d1d2108b5bb09"
+    },
+    {
+      "path": "training/configs/qwen3_product_agent_v9_repaired.yaml",
+      "bytes": 947,
+      "sha256": "e9293bd1b30290eaef7d613e6b8a2a8e0598500504ee8efb7b45a6d8fcd1cb19"
     },
     {
       "path": "training/configs/test.yaml",

@@ -29,6 +29,7 @@ internal static class AnnPowerShellLauncher
         startInfo.UseShellExecute = false;
         startInfo.RedirectStandardOutput = false;
         startInfo.RedirectStandardError = false;
+        startInfo.EnvironmentVariables["ANN_LAUNCHER_PID"] = Process.GetCurrentProcess().Id.ToString();
 
         using (Process process = Process.Start(startInfo))
         {

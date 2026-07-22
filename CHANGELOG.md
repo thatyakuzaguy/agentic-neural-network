@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 0.1.5 - 2026-07-22
+
+- Pinned Sharp 0.35.3 and PostCSS 8.5.20 across the npm workspace and lockfile
+  to remove newly disclosed production dependency vulnerabilities.
+- Added regression checks that reject vulnerable root or nested Sharp and
+  PostCSS resolutions before a release can pass.
+- Documented the workstation used for primary development and validation:
+  Ryzen 5 2600, RTX 3060 Ti with 8 GB VRAM, and 32 GB DDR4 memory.
+- Rebuilt the unsigned Windows offline distribution from the audited lockfile.
+- Installed the native uninstaller with ANN and added deferred self-cleanup so
+  complete removal succeeds on Windows without leaving locked files.
+
 ## 0.1.4 - 2026-07-21
 
 - Renamed the public product and repository to ANN (Agentic Neural Network),
